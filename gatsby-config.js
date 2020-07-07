@@ -5,6 +5,19 @@
  */
 
 module.exports = {
-  /* Your site config here */
-  plugins: ["gatsby-plugin-sass"],
+  siteMetadata: {
+    title: "Federico's Portfolio",
+    author: "Federico Cipriani",
+  },
+  plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+    "gatsby-transformer-remark",
+  ],
 }
