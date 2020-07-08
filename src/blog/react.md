@@ -1,9 +1,11 @@
 ---
-title: "Second post"
-date: "2020-07-07"
+title: 'Second post'
+date: '2020-07-07'
 ---
 
 My second post
+
+![Post Wallpaper](./wallpaper.jpeg)
 
 ## Details
 

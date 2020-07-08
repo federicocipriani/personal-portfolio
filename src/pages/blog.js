@@ -1,38 +1,40 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import blogStyles from './blog.module.scss';
+import Head from '../components/head';
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark {
+            allContentfulBlogPost(
+                sort: { fields: publishedDate, order: DESC }
+            ) {
                 edges {
                     node {
-                        frontmatter {
-                            title
-                            date
-                        }
-                        fields {
-                            slug
-                        }
+                        title
+                        slug
+                        publishedDate(formatString: "MMMM D, YYYY")
                     }
                 }
             }
         }
     `);
+    console.log(data);
     return (
         <Layout>
+            <Head title='Blog' />
             <h1>Digital Garden</h1>
-            <ol>
-                {data.allMarkdownRemark.edges.map((edge) => {
+            <ol className={blogStyles.posts}>
+                {data.allContentfulBlogPost.edges.map((edge) => {
                     return (
-                        <li>
+                        <li className={blogStyles.post}>
                             <h3>
-                                <Link to={`/blog/${edge.node.fields.slug}`}>
-                                    {edge.node.frontmatter.title}
+                                <Link to={`/blog/${edge.node.slug}`}>
+                                    {edge.node.title}
                                 </Link>
                             </h3>
-                            <p>{edge.node.frontmatter.date}</p>
+                            <p>{edge.node.publishedDate}</p>
                         </li>
                     );
                 })}

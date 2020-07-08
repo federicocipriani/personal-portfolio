@@ -1,12 +1,14 @@
-import React from "react"
-import Layout from "../components/layout"
+import React from 'react';
+import Layout from '../components/layout';
+import Head from '../components/head';
 
 const AboutPage = () => {
-  return (
-    <Layout>
-      <h1>Placeholder</h1>
-    </Layout>
-  )
-}
+    return (
+        <Layout>
+            <Head title='About' />
+            <h1>Placeholder</h1>
+        </Layout>
+    );
+};
 
-export default AboutPage
+export default AboutPage;
