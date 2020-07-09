@@ -20,17 +20,16 @@ const BlogPage = () => {
             }
         }
     `);
-    console.log(data);
     return (
         <Layout>
-            <Head title='Blog' />
+            <Head title='Digital Garden' />
             <h1>Digital Garden</h1>
             <ol className={blogStyles.posts}>
                 {data.allContentfulBlogPost.edges.map((edge) => {
                     return (
                         <li className={blogStyles.post}>
                             <h3>
-                                <Link to={`/blog/${edge.node.slug}`}>
+                                <Link to={`/digital-garden/${edge.node.slug}`}>
                                     {edge.node.title}
                                 </Link>
                             </h3>

@@ -1,33 +1,37 @@
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0 3rem;
+    position: fixed;
+    top: 0;
+    width: 80vw;
+    padding: 1em 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: teal;
 }
 
 .title {
-  color: black;
-  font-size: 3rem;
-  text-decoration: none;
+    color: black;
+    font-size: 1em;
+    margin-left: 0.5em;
+    text-decoration: none;
 }
 
 .nav-list {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
+    display: flex;
+    list-style-type: none;
 }
 
 .nav-item {
-  color: #999999;
-  font-size: 0.9rem;
-  margin-right: 1.3rem;
-  text-decoration: none;
+    color: #999999;
+    font-size: 1em;
+    text-decoration: none;
+    margin-right: 1.5em;
 }
 
 .nav-item:hover {
-  color: #666666;
+    color: #666666;
 }
 
 .active-nav-item {
-  color: #333333;
+    color: #333333;
 }
