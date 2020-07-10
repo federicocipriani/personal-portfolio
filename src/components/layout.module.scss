@@ -1,21 +1,9 @@
-// .container {
-//     margin: 0 auto;
-//     max-width: 80vw;
-//     padding: 1em;
-//     display: flex;
-//     flex-direction: column;
-//     // height: 100vh;
-// }
+@import '../styles/_variables.scss';
 
 .container {
     position: relative;
-    max-width: 80vw;
+    max-width: $page-width;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-}
-
-.content {
-    max-width: 100%;
-    padding-top: 100px;
 }
