@@ -1,7 +1,7 @@
 @import '../styles/_variables.scss';
 
 .header {
-    background-color: #fff;
+    background-color: $background-color;
     position: fixed;
     top: 0;
     width: $page-width;
