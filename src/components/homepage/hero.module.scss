@@ -1,7 +1,15 @@
 .hero {
+    position: relative;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.image {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    bottom: 3rem;
 }

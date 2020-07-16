@@ -23,21 +23,26 @@ const BlogPage = () => {
     return (
         <Layout>
             <Head title='Digital Garden' />
-            <h1>Digital Garden</h1>
-            <ol className={digitalGardenStyles.posts}>
-                {data.allContentfulBlogPost.edges.map((edge) => {
-                    return (
-                        <li className={digitalGardenStyles.post}>
-                            <h3>
-                                <Link to={`/digital-garden/${edge.node.slug}`}>
-                                    {edge.node.title}
-                                </Link>
-                            </h3>
-                            <p>{edge.node.publishedDate}</p>
-                        </li>
-                    );
-                })}
-            </ol>
+            <section className='page'>
+                <h1 className='page__title'>Digital Garden</h1>
+                <div>
+                    <ol className={digitalGardenStyles.posts}>
+                        {data.allContentfulBlogPost.edges.map((edge) => {
+                            return (
+                                <li className={digitalGardenStyles.post}>
+                                    <h3>
+                                        <Link
+                                            to={`/digital-garden/${edge.node.slug}`}>
+                                            {edge.node.title}
+                                        </Link>
+                                    </h3>
+                                    <p>{edge.node.publishedDate}</p>
+                                </li>
+                            );
+                        })}
+                    </ol>
+                </div>
+            </section>
         </Layout>
     );
 };

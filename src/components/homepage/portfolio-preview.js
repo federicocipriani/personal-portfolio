@@ -11,6 +11,7 @@ const PortfolioPreview = () => (
                         node {
                             id
                             projectName
+                            slug
                             projectPreview {
                                 fluid {
                                     src
@@ -28,9 +29,13 @@ const PortfolioPreview = () => (
         `}
         render={(data) => (
             <section className={portfolioPreviewStyles.container}>
-                <h1>
-                    These are some of the projects I am most proud of so far
-                </h1>
+                <h2 className={portfolioPreviewStyles.title}>
+                    Portfolio Preview
+                </h2>
+                <h3 className={portfolioPreviewStyles.section_text}>
+                    A quick look to some of the projects I am most proud of so
+                    far
+                </h3>
                 <div className={portfolioPreviewStyles.grid}>
                     {data.allContentfulProject.edges.map((edge) => (
                         <div
@@ -41,9 +46,9 @@ const PortfolioPreview = () => (
                                 alt='preview'
                                 className={portfolioPreviewStyles.previewImage}
                             />
-                            <h2 className={portfolioPreviewStyles.projectName}>
+                            <h3 className={portfolioPreviewStyles.projectName}>
                                 {edge.node.projectName}
-                            </h2>
+                            </h3>
                             <p
                                 className={
                                     portfolioPreviewStyles.projectDescription
@@ -63,6 +68,11 @@ const PortfolioPreview = () => (
                                     </p>
                                 ))}
                             </div>
+                            <Link
+                                to={`/portfolio/#${edge.node.slug}`}
+                                className='btn btn-center'>
+                                View more
+                            </Link>
                         </div>
                     ))}
                 </div>
@@ -75,40 +85,5 @@ const PortfolioPreview = () => (
         )}
     />
 );
-
-// const PortfolioPreview = () => {
-//     return (
-//         <section id='portfolio-preview-section'>
-//             <h1>These are some of the projects I am most proud of so far</h1>
-//             <div className={portfolioPreviewStyles.grid}>
-//                 {props.data.allContentfulProject.edges.map((edge, index) => {
-//                     return (
-//                         <Fragment>
-//                             <h3>{edge.node.projectName}</h3>
-//                             <img alt='' url={images[index]} />
-//                         </Fragment>
-//                     );
-//                 })}
-//             </div>
-//         </section>
-//     );
-// };
-
-// export const query = graphql`
-//     query {
-//         allContentfulProject {
-//             edges {
-//                 node {
-//                     projectName
-//                     projectPreview {
-//                         file {
-//                             url
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// `;
 
 export default PortfolioPreview;

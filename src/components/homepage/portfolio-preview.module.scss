@@ -1,3 +1,5 @@
+@import './src/styles/_variables.scss';
+
 .container {
     margin: 2rem auto;
     display: flex;
@@ -6,9 +8,16 @@
     border-radius: 15px;
 }
 
-h1 {
+.title {
     align-self: flex-start;
-    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.2rem solid $title-highlight;
+}
+
+.section_text {
+    align-self: flex-start;
+    margin-bottom: 1rem;
+    font-weight: 300;
 }
 
 .grid {
@@ -16,32 +25,38 @@ h1 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: auto;
     // height: 50vh;
-    margin: 1rem;
+    margin: 2rem 1rem;
     // min-height: 0;
     // min-width: 0;
     grid-gap: 1.5rem;
 }
 
 .card {
-    background-color: #f3c623;
+    background-color: #0282c3;
+    max-width: 250px;
+    // border: 1px solid white;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 3px 3px 5px #f4f4f4;
-    border-radius: 5px;
+    box-shadow: 2px 2px 8px #aec0ce;
+    border-radius: 15px;
     padding: 1rem;
     transition: all 0.7s ease;
 }
 
 .card:hover {
-    transform: scale(1.1);
-    box-shadow: 8px 8px 10px #f4f4f4;
+    transform: scale(1.05);
+    // box-shadow: 5px 5px 10px #76a0b6;
 }
 
 .previewImage {
     width: 100%;
+    justify-self: center;
+    align-self: center;
     margin-bottom: 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px #02478c;
 }
 
 .projectName {
@@ -63,7 +78,7 @@ h1 {
 }
 
 .languagesLabels__label {
-    background-color: #333;
+    background-color: #02478c;
     color: #fff;
     border-radius: 5px;
     margin-bottom: 2px;

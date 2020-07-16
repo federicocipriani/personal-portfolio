@@ -1,0 +1,12 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    // margin-top: 12vh;
+}
+
+.page__title {
+    padding-top: 15vh;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+}

@@ -1,20 +1,18 @@
 import React, { Fragment } from 'react';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import Hero from '../components/hero';
-import PortfolioPreview from '../components/portfolio-preview';
-import AboutPreview from '../components/about-preview';
+import Hero from '../components/homepage/hero';
+import PortfolioPreview from '../components/homepage/portfolio-preview';
+import AboutPreview from '../components/homepage/about-preview';
 import Head from '../components/head';
 
 const HomePage = () => {
     return (
         <Layout>
             <Head title='Home' />
-            <Fragment>
-                <Hero />
-                <PortfolioPreview />
-                <AboutPreview />
-            </Fragment>
+            <Hero />
+            <PortfolioPreview />
+            <AboutPreview />
         </Layout>
     );
 };

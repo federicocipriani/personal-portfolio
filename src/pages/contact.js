@@ -6,7 +6,10 @@ const ContactPage = () => {
     return (
         <Layout>
             <Head title='Contact' />
-            <h1>Placeholder</h1>
+            <section className='page'>
+                <h1 className='page__title'>Contact</h1>
+                <div>Page content</div>
+            </section>
         </Layout>
     );
 };

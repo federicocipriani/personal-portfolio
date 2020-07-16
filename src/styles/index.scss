@@ -10,15 +10,29 @@
 
 body {
     background-color: $background-color;
-    // opacity: 0.7;
+    // color: #414e54;
+    overflow-y: overlay;
 }
 
-section {
-    margin: 1rem 0 1rem;
+// main {
+//     display: flex;
+//     flex-direction: column;
+// }
+
+.page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page__title {
+    padding-top: 15vh;
+    font-size: 3rem;
+    margin-bottom: 3rem;
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 2.25rem;
 }
 
 h2 {
@@ -33,16 +47,34 @@ p {
     font-size: 0.8rem;
 }
 
+button {
+    display: inline;
+}
+
 .btn {
+    display: inline-block;
+    background-color: #ffffff;
     text-decoration: none;
     font-size: 0.8rem;
     color: black;
-    border: 1px solid black;
+    border: 1px solid #02478c;
     padding: 0.5rem 1.2rem;
+    margin-top: 0.5rem;
     border-radius: 2rem;
+    text-align: center;
+}
+
+.btn.btn-left {
+    justify-self: flex-start;
+    align-self: flex-start;
+}
+
+.btn.btn-center {
+    justify-self: center;
+    align-self: center;
 }
 
 .btn:hover {
-    background-color: black;
+    background-color: #02478c;
     color: #fff;
 }

@@ -15,55 +15,57 @@ const Header = () => {
     `);
     return (
         <header className={headerStyles.header}>
-            <h1>
-                <Link className={headerStyles.title} to='/'>
-                    FC
-                </Link>
-            </h1>
-            <nav>
-                <ul className={headerStyles.navList}>
-                    <li>
-                        <Link
-                            className={headerStyles.navItem}
-                            activeClassName={headerStyles.activeNavItem}
-                            to='/'>
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className={headerStyles.navItem}
-                            activeClassName={headerStyles.activeNavItem}
-                            to='/about'>
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className={headerStyles.navItem}
-                            activeClassName={headerStyles.activeNavItem}
-                            to='/portfolio'>
-                            Portfolio
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className={headerStyles.navItem}
-                            activeClassName={headerStyles.activeNavItem}
-                            to='/digital-garden'>
-                            Digital Garden
-                        </Link>
-                    </li>
-                    <li>
-                        <Link
-                            className={headerStyles.navItem}
-                            activeClassName={headerStyles.activeNavItem}
-                            to='/contact'>
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+            <div className={headerStyles.header__container}>
+                <p>
+                    <Link className={headerStyles.title} to='/'>
+                        FC
+                    </Link>
+                </p>
+                <nav>
+                    <ul className={headerStyles.nav__list}>
+                        <li>
+                            <Link
+                                className={headerStyles.nav__list__item}
+                                activeClassName={headerStyles.active_nav__item}
+                                to='/'>
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className={headerStyles.nav__list__item}
+                                activeClassName={headerStyles.active_nav__item}
+                                to='/about'>
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className={headerStyles.nav__list__item}
+                                activeClassName={headerStyles.active_nav__item}
+                                to='/portfolio'>
+                                Portfolio
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className={headerStyles.nav__list__item}
+                                activeClassName={headerStyles.active_nav__item}
+                                to='/digital-garden'>
+                                Digital Garden
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className={headerStyles.nav__list__item}
+                                activeClassName={headerStyles.active_nav__item}
+                                to='/contact'>
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
     );
 };
