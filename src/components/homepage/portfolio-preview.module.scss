@@ -12,6 +12,7 @@
     align-self: flex-start;
     margin-bottom: 1rem;
     border-bottom: 0.2rem solid $title-highlight;
+    font-weight: 400;
 }
 
 .section_text {
@@ -42,7 +43,7 @@
     box-shadow: 2px 2px 8px #aec0ce;
     border-radius: 15px;
     padding: 1rem;
-    transition: all 0.7s ease;
+    transition: all 0.7s ease-in-out;
 }
 
 .card:hover {

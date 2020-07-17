@@ -5,17 +5,23 @@ import image from '../../images/virtualreality.svg';
 const Hero = () => {
     return (
         <section className={heroStyles.hero}>
-            <h1>Hello.</h1>
-            <h2>
-                I am{' '}
-                <span style={{ color: '#02478c', fontWeight: '900' }}>
-                    Federico
-                </span>
-                , a front-end developer living in the UK.
-            </h2>
-            <br />
-            <br />
-            <h3>I love data, coding and design.</h3>
+            <div className={heroStyles.page__content}>
+                <h1 style={{ fontWeight: '400' }}>Hello.</h1>
+                <h2 style={{ fontWeight: '400' }}>
+                    I am{' '}
+                    <span style={{ color: '#02478c', fontWeight: '400' }}>
+                        Federico
+                    </span>
+                    . I love data, coding and design.
+                </h2>
+
+                <br />
+                <br />
+                {/* <h3>I love data, coding and design.</h3>
+            <br /> */}
+                <br />
+                <h3>Welcome to my playground.</h3>
+            </div>
             <img src={image} alt='' className={heroStyles.image} />
         </section>
     );

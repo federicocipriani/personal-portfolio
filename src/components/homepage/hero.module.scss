@@ -1,15 +1,30 @@
 .hero {
     position: relative;
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+}
+
+.page__content {
+    position: absolute;
+    top: 30%;
 }
 
 .image {
     position: absolute;
-    width: 30%;
+    width: 35%;
     right: 0;
     bottom: 3rem;
+}
+
+@media (max-width: 600px) {
+    .image {
+        // text-align: center;
+        // right: 30%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        // bottom: 2rem;
+    }
 }

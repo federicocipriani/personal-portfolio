@@ -30,7 +30,7 @@ const PortfolioPreview = () => (
         render={(data) => (
             <section className={portfolioPreviewStyles.container}>
                 <h2 className={portfolioPreviewStyles.title}>
-                    Portfolio Preview
+                    Portfolio preview
                 </h2>
                 <h3 className={portfolioPreviewStyles.section_text}>
                     A quick look to some of the projects I am most proud of so
@@ -46,7 +46,9 @@ const PortfolioPreview = () => (
                                 alt='preview'
                                 className={portfolioPreviewStyles.previewImage}
                             />
-                            <h3 className={portfolioPreviewStyles.projectName}>
+                            <h3
+                                className={portfolioPreviewStyles.projectName}
+                                style={{ fontWeight: '400' }}>
                                 {edge.node.projectName}
                             </h3>
                             <p

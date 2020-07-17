@@ -46,6 +46,7 @@ const PortfolioPage = () => (
                                 <img
                                     src={edge.node.projectPreview.fluid.src}
                                     alt=''
+                                    loading='lazy'
                                     className={
                                         portfolioStyle.project_card__preview
                                     }
@@ -76,9 +77,13 @@ const PortfolioPage = () => (
                                         href={edge.node.projectUrl}
                                         target='_blank'
                                         rel='noopener noreferrer'
-                                        className='btn btn-left '>
+                                        className='btn btn-left '
+                                        style={{
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                        }}>
                                         <i class='ri-external-link-line'></i>{' '}
-                                        Link to website
+                                        Website
                                     </a>
                                 </div>
                             </div>

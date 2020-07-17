@@ -1,12 +1,73 @@
-.section {
+@import './src/styles/_variables.scss';
+
+.page__content__card {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    // margin-top: 12vh;
 }
 
-.page__title {
-    padding-top: 15vh;
-    font-size: 3rem;
-    margin-bottom: 3rem;
+.page__content__card__title {
+    margin-bottom: 1rem;
 }
+
+.page__content__card__container {
+    display: flex;
+}
+
+.page__content__card__container__title {
+    margin-bottom: 1rem;
+}
+
+.page__content__card__experience {
+    flex-basis: 50%;
+}
+
+.page__content__card__education {
+    list-style-position: inside;
+}
+
+// .page__content {
+//     display: flex;
+//     justify-content: space-between;
+// }
+
+// .about__description {
+//     width: 30%;
+//     line-height: 1.5rem;
+// }
+
+// .about__curriculum {
+//     display: flex;
+//     flex-direction: column;
+//     width: 60%;
+//     line-height: 1.5rem;
+// }
+
+// .about__title {
+//     line-height: 2rem;
+//     margin-bottom: 1rem;
+// }
+
+// .about__curriculum__section {
+//     margin-bottom: 2rem;
+// }
+
+// .about__curriculum__section__card {
+//     margin-bottom: 1.5rem;
+// }
+
+// .about__curriculum__section__heading {
+//     margin-bottom: 1rem;
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .about__curriculum__section__heading__main {
+//     margin-bottom: 0.2rem;
+//     display: flex;
+//     justify-content: space-between;
+//     // align-self: flex-end;
+// }
+
+// .about__curriculum__section__list {
+//     list-style-position: inside;
+// }

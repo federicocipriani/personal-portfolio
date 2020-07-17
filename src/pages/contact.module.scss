@@ -1,0 +1,50 @@
+.page__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact_form__label {
+    margin-bottom: 2rem;
+}
+
+.inputField {
+    height: 2rem;
+    padding: 0 0.5rem;
+    width: 90%;
+    margin-bottom: 1rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+}
+
+.textArea {
+    padding: 0.5rem 0.5rem;
+    width: 90%;
+    margin-bottom: 1rem;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    resize: none;
+}
+
+.social_contacts {
+    padding: 5rem 1rem;
+}
+
+.social_contacts__links {
+    padding: 1rem;
+}
+
+.social_contacts__links__item {
+    text-decoration: none;
+    color: black;
+    margin-right: 1rem;
+    &:hover {
+        color: #02478c;
+    }
+}
