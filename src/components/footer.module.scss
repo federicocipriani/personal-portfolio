@@ -1,3 +1,32 @@
 .footer {
-    padding: 2rem 0;
+    padding: 2rem 0 1rem;
+}
+
+.links_row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social_contacts__links {
+    padding: 0.5rem 0 0;
+}
+
+.social_contacts__links__item {
+    text-decoration: none;
+    color: black;
+    margin-right: 0.5rem;
+    &:hover {
+        color: #02478c;
+    }
+}
+
+.backtotop_button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #d4d4d4;
+    font-weight: 300;
+    outline: none;
+    border: none;
 }

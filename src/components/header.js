@@ -13,6 +13,10 @@ const Header = () => {
             }
         }
     `);
+    const isPartiallyActive = ({ isPartiallyCurrent }) =>
+        isPartiallyCurrent
+            ? { className: headerStyles.active_nav__item }
+            : null;
     return (
         <header className={headerStyles.header}>
             <div className={headerStyles.header__container}>
@@ -42,8 +46,9 @@ const Header = () => {
                         <li>
                             <Link
                                 className={headerStyles.nav__list__item}
-                                activeClassName={headerStyles.active_nav__item}
-                                to='/portfolio'>
+                                // activeClassName={headerStyles.active_nav__item}
+                                to='/portfolio'
+                                getProps={isPartiallyActive}>
                                 Portfolio
                             </Link>
                         </li>

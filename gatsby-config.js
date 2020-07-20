@@ -4,6 +4,7 @@ module.exports = {
         author: 'Federico Cipriani',
     },
     plugins: [
+        'gatsby-plugin-smoothscroll',
         'gatsby-plugin-react-helmet',
         {
             resolve: 'gatsby-source-contentful',

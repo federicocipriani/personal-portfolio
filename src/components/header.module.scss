@@ -40,14 +40,19 @@
     font-size: 1em;
     text-decoration: none;
     margin-left: 1.5em;
-}
-
-.nav__list__item:hover {
-    color: #0282c3;
+    &:hover {
+        color: #0282c3;
+    }
 }
 
 .active_nav__item {
+    font-size: 1em;
+    text-decoration: none;
+    margin-left: 1.5em;
     color: #02478c;
+    &:hover {
+        color: #0282c3;
+    }
 }
 
 @media (max-width: 700px) {
