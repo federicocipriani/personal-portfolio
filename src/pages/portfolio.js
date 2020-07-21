@@ -8,7 +8,9 @@ const PortfolioPage = () => (
     <StaticQuery
         query={graphql`
             query PortfolioQuery {
-                allContentfulProject {
+                allContentfulProject(
+                    sort: { fields: releaseDate, order: DESC }
+                ) {
                     edges {
                         node {
                             id
@@ -24,6 +26,7 @@ const PortfolioPage = () => (
                             shortDescription
                             fullDescription
                             projectUrl
+                            githubUrl
                             languages {
                                 language
                             }
@@ -41,7 +44,6 @@ const PortfolioPage = () => (
                         {data.allContentfulProject.edges.map((edge) => (
                             <div
                                 key={edge.node.id}
-                                id={`#${edge.node.slug}`}
                                 className={portfolioStyle.project_card}>
                                 <img
                                     src={edge.node.projectPreview.fluid.src}
@@ -56,35 +58,68 @@ const PortfolioPage = () => (
                                         portfolioStyle.project_card__content
                                     }>
                                     <h2
+                                        id={`#${edge.node.slug}`}
                                         className={
                                             portfolioStyle.project_card__title
                                         }>
                                         {edge.node.projectName}
                                     </h2>
+
                                     <p
                                         className={
                                             portfolioStyle.project_card__releaseDate
                                         }>
                                         {edge.node.releaseDate}
                                     </p>
+                                    <div
+                                        className={
+                                            portfolioStyle.project_card__languages
+                                        }>
+                                        {edge.node.languages.map((language) => (
+                                            <p
+                                                className={
+                                                    portfolioStyle.project_card__languages__label
+                                                }>
+                                                {language.language}
+                                            </p>
+                                        ))}
+                                    </div>
                                     <p
                                         className={
                                             portfolioStyle.project_card__description
                                         }>
                                         {edge.node.fullDescription}
                                     </p>
-                                    <a
-                                        href={edge.node.projectUrl}
-                                        target='_blank'
-                                        rel='noopener noreferrer'
-                                        className='btn btn-left '
-                                        style={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                        }}>
-                                        <i class='ri-external-link-line'></i>{' '}
-                                        Website
-                                    </a>
+
+                                    <div
+                                        className={
+                                            portfolioStyle.project_card__links
+                                        }>
+                                        <a
+                                            href={edge.node.projectUrl}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='btn'
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                            }}>
+                                            <i class='ri-external-link-line'></i>{' '}
+                                            Website
+                                        </a>
+                                        <a
+                                            href={edge.node.githubUrl}
+                                            target='_blank'
+                                            rel='noopener noreferrer'
+                                            className='btn'
+                                            style={{
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                            }}>
+                                            <i class='ri-github-line'></i>
+                                            GitHub
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         ))}

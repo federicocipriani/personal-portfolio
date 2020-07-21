@@ -40,7 +40,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 2px 2px 8px #aec0ce;
+    box-shadow: 2px 2px 8px #aec0ce, -2px 2px 8px #aec0ce;
     border-radius: 15px;
     padding: 1rem;
     transition: all 0.7s ease-in-out;
@@ -48,7 +48,7 @@
 
 .card:hover {
     transform: scale(1.05);
-    // box-shadow: 5px 5px 10px #76a0b6;
+    box-shadow: 5px 5px 15px #aec0ce, -5px 5px 15px #76a0b6;
 }
 
 .previewImage {
@@ -71,10 +71,9 @@
 
 .languagesLabels {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
     justify-self: end;
-    margin-top: 2px;
+    flex-wrap: wrap;
     padding: 1px 0;
 }
 
@@ -82,8 +81,9 @@
     background-color: #02478c;
     color: #fff;
     border-radius: 5px;
-    margin-bottom: 2px;
-    padding: 1px 3px;
+    margin-bottom: 0.2rem;
+    margin-right: 0.3rem;
+    padding: 0.1rem 0.3rem;
 }
 
 .btnHome {

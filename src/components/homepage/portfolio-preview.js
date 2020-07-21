@@ -6,7 +6,10 @@ const PortfolioPreview = () => (
     <StaticQuery
         query={graphql`
             query PortfolioPreviewQuery {
-                allContentfulProject(filter: { home: { eq: true } }) {
+                allContentfulProject(
+                    sort: { fields: releaseDate, order: DESC }
+                    filter: { home: { eq: true } }
+                ) {
                     edges {
                         node {
                             id

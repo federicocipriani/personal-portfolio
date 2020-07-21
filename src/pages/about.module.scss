@@ -1,12 +1,30 @@
 @import './src/styles/_variables.scss';
 
+.page__content {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
 .page__content__card {
     display: flex;
     flex-direction: column;
+    width: 50%;
+}
+
+.page__content__image {
+    padding: 1rem;
+    width: 50%;
 }
 
 .page__content__card__title {
     margin-bottom: 1rem;
+}
+
+.page__content__card__text {
+    // text-align: justify;
+    // text-justify: inter-word;
+    line-height: 1.25rem;
+    margin-bottom: 1.5rem;
 }
 
 .page__content__card__container {
@@ -25,6 +43,21 @@
     list-style-position: inside;
 }
 
+.image {
+    width: 100%;
+}
+
+.contacts {
+    padding-bottom: 2rem;
+    &__link {
+        display: flex;
+        align-items: center;
+        padding-top: 0.3rem;
+        &__click {
+            color: #02478c;
+        }
+    }
+}
 // .page__content {
 //     display: flex;
 //     justify-content: space-between;

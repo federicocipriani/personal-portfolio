@@ -37,9 +37,10 @@ const AboutPreview = () => {
                     <p>
                         I am probably not seeking perfection, but I try hard
                         everyday to become 1% better than the day before. As
-                        Albert Einstein once said (maybe) "compound is the eight
-                        wonder of the modern world". We live in a "power law"
-                        world. I am here to see where I can get.
+                        (perhaps) Albert Einstein once said "compound is the
+                        eight wonder of the modern world". And as Peter Thiel
+                        suggests, we live in a "power law" world. I am here to
+                        see where I can get.
                     </p>
                 </div>
             </div>
