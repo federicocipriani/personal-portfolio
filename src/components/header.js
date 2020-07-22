@@ -46,7 +46,7 @@ const Header = () => {
                         <li>
                             <Link
                                 className={headerStyles.nav__list__item}
-                                // activeClassName={headerStyles.active_nav__item}
+                                activeClassName={headerStyles.active_nav__item}
                                 to='/portfolio'
                                 getProps={isPartiallyActive}>
                                 Portfolio

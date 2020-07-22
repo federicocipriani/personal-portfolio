@@ -1,6 +1,7 @@
 import React from 'react';
 import heroStyles from './hero.module.scss';
 import image from '../../images/virtualreality.svg';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Hero = () => {
     return (
@@ -12,7 +13,7 @@ const Hero = () => {
                     <span style={{ color: '#02478c', fontWeight: '400' }}>
                         Federico
                     </span>
-                    . I love data, coding and design.
+                    . I love AI, coding and design.
                 </h2>
 
                 <br />
@@ -22,7 +23,18 @@ const Hero = () => {
                 <br />
                 <h3>Welcome to my playground.</h3>
             </div>
-            <img src={image} alt='' className={heroStyles.image} />
+            <div className={heroStyles.image_container}>
+                <img
+                    src={image}
+                    alt=''
+                    className={heroStyles.image_container__image}
+                />
+            </div>
+            <button
+                className={heroStyles.arrow_down}
+                onClick={() => scrollTo('#portfolio-preview')}>
+                <i class='ri-arrow-down-s-line ri-2x'></i>
+            </button>
         </section>
     );
 };

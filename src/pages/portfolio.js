@@ -45,14 +45,19 @@ const PortfolioPage = () => (
                             <div
                                 key={edge.node.id}
                                 className={portfolioStyle.project_card}>
-                                <img
-                                    src={edge.node.projectPreview.fluid.src}
-                                    alt=''
-                                    loading='lazy'
+                                <div
                                     className={
                                         portfolioStyle.project_card__preview
-                                    }
-                                />
+                                    }>
+                                    <img
+                                        src={edge.node.projectPreview.fluid.src}
+                                        alt=''
+                                        loading='lazy'
+                                        className={
+                                            portfolioStyle.project_card__preview__image
+                                        }
+                                    />
+                                </div>
                                 <div
                                     className={
                                         portfolioStyle.project_card__content

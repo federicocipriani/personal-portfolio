@@ -14,7 +14,7 @@
     margin: 2rem auto 3rem;
 }
 
-.profile {
+.profile_pic {
     border-radius: 50%;
 }
 
@@ -25,6 +25,42 @@
 .title {
     display: inline;
     align-self: flex-start;
-    border-bottom: 0.2rem solid $title-highlight;
+    border-bottom: 0.1rem solid $title-highlight;
     font-weight: 400;
 }
+
+// @media only screen and (max-width: 992px) {
+//     .paragraph {
+//         padding-left: 1.5rem;
+//     }
+// }
+
+@media only screen and (max-width: 768px) {
+    .paragraph {
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .title {
+        font-size: 1.5rem;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .profile_pic {
+        margin: auto;
+    }
+
+    .paragraph {
+        padding-top: 2rem;
+    }
+}
+
+// @media only screen and (max-width: 768px) {
+//     .paragraph {
+//         padding-left: 3rem;
+//     }
+// }

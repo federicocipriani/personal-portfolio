@@ -31,7 +31,9 @@ const PortfolioPreview = () => (
             }
         `}
         render={(data) => (
-            <section className={portfolioPreviewStyles.container}>
+            <section
+                id='portfolio-preview'
+                className={portfolioPreviewStyles.container}>
                 <h2 className={portfolioPreviewStyles.title}>
                     Portfolio preview
                 </h2>
@@ -39,7 +41,7 @@ const PortfolioPreview = () => (
                     A quick look to some of the projects I am most proud of so
                     far
                 </h3>
-                <div className={portfolioPreviewStyles.grid}>
+                <div className={portfolioPreviewStyles.display}>
                     {data.allContentfulProject.edges.map((edge) => (
                         <div
                             key={edge.node.id}

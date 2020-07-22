@@ -7,7 +7,6 @@
     top: 0;
     left: 0;
     width: 100vw;
-    // height: 10vh;
     padding: 1em 0;
     display: flex;
     justify-content: center;
@@ -55,7 +54,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media only screen and (max-width: 768px) {
     .header__container {
         width: $page-width;
         display: flex;
@@ -66,6 +65,9 @@
         line-height: 1.75rem;
     }
     .nav__list__item {
+        margin-left: 0;
+    }
+    .active_nav__item {
         margin-left: 0;
     }
 }

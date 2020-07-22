@@ -22,7 +22,7 @@ body {
 }
 
 .page__title {
-    padding-top: 15vh;
+    padding-top: 10%;
     font-size: 3rem;
     margin-bottom: 3rem;
 }
@@ -62,12 +62,12 @@ i {
     text-decoration: none;
     font-size: 0.8rem;
     color: black;
-    // border: 1px solid #02478c;
     border: 1px solid #d4d4d4;
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 2rem;
     margin-top: 0.5rem;
     border-radius: 2rem;
     text-align: center;
+    transition: all 0.3s ease-in-out;
 }
 
 .btn.btn-left {
@@ -86,10 +86,83 @@ i {
     color: #fff;
 }
 
-@media (max-width: 700px) {
-    .page__title {
-        padding-top: 28vh;
+// @media only screen and (max-width: 700px) {
+//     .page__title {
+//         padding-top: 28vh;
+//         font-size: 3rem;
+//         margin-bottom: 3rem;
+//     }
+// }
+
+// ----------------------------------------------
+// MEDIA QUERIES
+
+@media only screen and (min-width: 1025px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
         font-size: 3rem;
-        margin-bottom: 3rem;
+    }
+    h3 {
+        font-size: 1.7rem;
+    }
+    p {
+        font-size: 1rem;
+        line-height: 1.75rem;
     }
 }
+@media only screen and (max-width: 1024px) {
+    .page__title {
+        padding-top: 15%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .page__title {
+        padding-top: 14rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1rem;
+    }
+    .page__title {
+        padding-top: 15rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .page__title {
+        padding-top: 15rem;
+    }
+}
+
+// @media (min-width: 1441px) {
+//     h1 {
+//         font-size: 6rem;
+//         font-weight: 300;
+//     }
+
+//     h2 {
+//         font-size: 4rem;
+//         font-weight: 300;
+//     }
+
+//     h3 {
+//         font-size: 2.5rem;
+//         font-weight: 300;
+//     }
+
+//     p {
+//         font-size: 1.5rem;
+//         font-weight: 300;
+//     }
+// }

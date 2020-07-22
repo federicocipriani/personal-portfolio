@@ -8,10 +8,15 @@
     border-radius: 15px;
 }
 
+.container::before {
+    content: '';
+    height: 100px;
+}
+
 .title {
     align-self: flex-start;
     margin-bottom: 1rem;
-    border-bottom: 0.2rem solid $title-highlight;
+    border-bottom: 0.1rem solid $title-highlight;
     font-weight: 400;
 }
 
@@ -21,19 +26,24 @@
     font-weight: 300;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: auto;
+.display {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    // display: grid;
+    // grid-template-columns: repeat(3, minmax(0, 1fr));
+    // grid-template-rows: auto;
     // height: 50vh;
     margin: 2rem 1rem;
     // min-height: 0;
     // min-width: 0;
-    grid-gap: 1.5rem;
+    // grid-gap: 1.5rem;
 }
 
 .card {
     background-color: #0282c3;
+    min-width: 200px;
     max-width: 250px;
     // border: 1px solid white;
     color: #ffffff;
@@ -42,7 +52,8 @@
     align-items: flex-start;
     box-shadow: 2px 2px 8px #aec0ce, -2px 2px 8px #aec0ce;
     border-radius: 15px;
-    padding: 1rem;
+    padding: 1.25rem;
+    margin: 1rem;
     transition: all 0.7s ease-in-out;
 }
 
@@ -89,3 +100,76 @@
 .btnHome {
     margin: 1rem 0;
 }
+
+@media only screen and (min-width: 1440px) {
+    .card {
+        padding: 1.5rem;
+    }
+    .languagesLabels {
+        margin: 0.4rem 0;
+    }
+    // .container::before {
+    //     height: 80px;
+    // }
+    // .card {
+    //     min-width: 200px;
+    //     max-width: 300px;
+    // }
+}
+
+@media only screen and (max-width: 768px) {
+    .container::before {
+        height: 220px;
+    }
+    .image_container {
+        // right: 0;
+        width: 40%;
+    }
+    .display {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .card {
+        margin: 1rem;
+    }
+}
+
+// @media only screen and (max-width: 425px) {
+//     .container::before {
+//         height: 220px;
+//     }
+//     .image_container {
+//         // right: 0;
+//         width: 40%;
+//     }
+//     .grid {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//     }
+//     .card {
+//         margin-bottom: 2rem;
+//     }
+// }
+
+// @media only screen and (max-width: 992px) {
+//     .container::before {
+//         height: 80px;
+//     }
+
+//     .grid {
+//         display: flex;
+//         flex-wrap: wrap;
+//         justify-content: center;
+//     }
+//     .card {
+//         margin: 1rem;
+//     }
+// }
+
+// @media only screen and (max-width: 700px) {
+//     .container::before {
+//         height: 220px;
+//     }
+// }

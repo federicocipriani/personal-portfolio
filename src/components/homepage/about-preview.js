@@ -10,7 +10,7 @@ const AboutPreview = () => {
                 <img
                     src={profilePic}
                     alt='Profile picture'
-                    className={aboutPreviewStyles.profile}
+                    className={aboutPreviewStyles.profile_pic}
                 />
                 <div className={aboutPreviewStyles.paragraph}>
                     <p>
