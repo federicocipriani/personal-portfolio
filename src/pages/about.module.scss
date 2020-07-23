@@ -2,13 +2,14 @@
 
 .page__content {
     display: flex;
+    flex-direction: column;
     margin-bottom: 1rem;
 }
 
-.page__content__card {
+.page__content__questions {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
 }
 
 .page__content__image {
@@ -17,6 +18,18 @@
 }
 
 .page__content__card__title {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.page__content__card__header {
+    cursor: pointer;
+    position: relative;
     display: flex;
     justify-content: start;
     align-items: center;
@@ -77,8 +90,9 @@
     width: 100%;
 }
 
-.contacts {
-    padding-bottom: 2rem;
+.page__content__contacts {
+    padding-top: 4rem;
+    padding-bottom: 1rem;
     &__link {
         display: flex;
         align-items: center;
@@ -86,16 +100,5 @@
         &__click {
             color: #02478c;
         }
-    }
-}
-
-@keyframes appear {
-    from {
-        transform: translateY(-2rem);
-        opacity: 0;
-    }
-    to {
-        transform: translateY(0px);
-        opacity: 1;
     }
 }

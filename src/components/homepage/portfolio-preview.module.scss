@@ -42,37 +42,43 @@
 }
 
 .card {
-    background-color: #0282c3;
+    // background-color: #0282c3;
     min-width: 200px;
     max-width: 250px;
     // border: 1px solid white;
-    color: #ffffff;
+    // color: #ffffff;
+    color: #000;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    box-shadow: 2px 2px 8px #aec0ce, -2px 2px 8px #aec0ce;
-    border-radius: 15px;
-    padding: 1.25rem;
+    box-shadow: 2px 2px 8px #d4d4d4, -2px 2px 8px #d4d4d4;
+    border-radius: 1rem;
+    // padding: 1.25rem;
     margin: 1rem;
     transition: all 0.7s ease-in-out;
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 5px 5px 15px #aec0ce, -5px 5px 15px #76a0b6;
+    box-shadow: 5px 5px 15px #d4d4d4, -5px 5px 15px #d4d4d4;
 }
 
 .previewImage {
     width: 100%;
     justify-self: center;
     align-self: center;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    box-shadow: 1px 1px 3px #02478c;
+    border-radius: 1rem;
+    z-index: 1;
 }
 
 .projectName {
     margin-bottom: 0.5rem;
+}
+
+.description_container {
+    // background-color: #0282c3;
+    padding: 1rem;
+    // margin-top: -1rem;
 }
 
 .projectDescription {
@@ -102,9 +108,9 @@
 }
 
 @media only screen and (min-width: 1440px) {
-    .card {
-        padding: 1.5rem;
-    }
+    // .card {
+    //     padding: 1.5rem;
+    // }
     .languagesLabels {
         margin: 0.4rem 0;
     }
@@ -120,10 +126,6 @@
 @media only screen and (max-width: 768px) {
     .container::before {
         height: 220px;
-    }
-    .image_container {
-        // right: 0;
-        width: 40%;
     }
     .display {
         display: flex;

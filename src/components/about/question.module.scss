@@ -1,0 +1,50 @@
+.page__card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.page__card__header_toggler {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.page__content__card__header_chevron {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.page__content__card__header_chevron_active {
+    transform: rotate(90deg);
+}
+
+.page__card__paragraph__visible {
+    display: block;
+    padding-top: 1rem;
+    padding-left: 2.1rem;
+    line-height: 1.25rem;
+    animation: appear 1.2s ease-out -0.25s;
+}
+
+.page__card__paragraph__notvisible {
+    display: none;
+}
+
+@keyframes appear {
+    from {
+        transform: translateY(-2.5rem);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

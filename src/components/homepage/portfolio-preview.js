@@ -51,35 +51,42 @@ const PortfolioPreview = () => (
                                 alt='preview'
                                 className={portfolioPreviewStyles.previewImage}
                             />
-                            <h3
-                                className={portfolioPreviewStyles.projectName}
-                                style={{ fontWeight: '400' }}>
-                                {edge.node.projectName}
-                            </h3>
-                            <p
-                                className={
-                                    portfolioPreviewStyles.projectDescription
-                                }>
-                                {edge.node.shortDescription}
-                            </p>
                             <div
                                 className={
-                                    portfolioPreviewStyles.languagesLabels
+                                    portfolioPreviewStyles.description_container
                                 }>
-                                {edge.node.languages.map((language) => (
-                                    <p
-                                        className={
-                                            portfolioPreviewStyles.languagesLabels__label
-                                        }>
-                                        {language.language}
-                                    </p>
-                                ))}
+                                <h3
+                                    className={
+                                        portfolioPreviewStyles.projectName
+                                    }
+                                    style={{ fontWeight: '400' }}>
+                                    {edge.node.projectName}
+                                </h3>
+                                <p
+                                    className={
+                                        portfolioPreviewStyles.projectDescription
+                                    }>
+                                    {edge.node.shortDescription}
+                                </p>
+                                <div
+                                    className={
+                                        portfolioPreviewStyles.languagesLabels
+                                    }>
+                                    {edge.node.languages.map((language) => (
+                                        <p
+                                            className={
+                                                portfolioPreviewStyles.languagesLabels__label
+                                            }>
+                                            {language.language}
+                                        </p>
+                                    ))}
+                                </div>
+                                <Link
+                                    to={`/portfolio/#${edge.node.slug}`}
+                                    className='btn btn-center'>
+                                    View more
+                                </Link>
                             </div>
-                            <Link
-                                to={`/portfolio/#${edge.node.slug}`}
-                                className='btn btn-center'>
-                                View more
-                            </Link>
                         </div>
                     ))}
                 </div>
