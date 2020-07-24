@@ -10,18 +10,41 @@ const Hero = () => {
                 <h1 style={{ fontWeight: '400' }}>Hello.</h1>
                 <h2 style={{ fontWeight: '400' }}>
                     I am{' '}
-                    <span style={{ color: '#02478c', fontWeight: '400' }}>
+                    <span style={{ color: 'var(--color2)', fontWeight: '400' }}>
                         Federico
                     </span>
-                    . I love AI, coding and design.
+                    . I love{' '}
+                    <span
+                        style={{
+                            color: 'var(--color2)',
+                            textDecoration: 'underline dashed',
+                        }}>
+                        AI
+                    </span>
+                    ,{' '}
+                    <span
+                        style={{
+                            color: 'var(--color2)',
+                            textDecoration: 'underline dashed',
+                        }}>
+                        coding
+                    </span>{' '}
+                    and{' '}
+                    <span
+                        style={{
+                            color: 'var(--color2)',
+                            textDecoration: 'underline dashed',
+                        }}>
+                        design
+                    </span>
+                    .
                 </h2>
-
                 <br />
                 <br />
-                {/* <h3>I love data, coding and design.</h3>
-            <br /> */}
                 <br />
-                <h3>Welcome to my playground.</h3>
+                <h3 style={{ color: 'var(--color3)', fontWeight: '400' }}>
+                    Welcome to my playground.
+                </h3>
             </div>
             <div className={heroStyles.image_container}>
                 <img
@@ -30,11 +53,13 @@ const Hero = () => {
                     className={heroStyles.image_container__image}
                 />
             </div>
-            <button
-                className={heroStyles.arrow_down}
-                onClick={() => scrollTo('#portfolio-preview')}>
-                <i class='ri-arrow-down-s-line ri-2x'></i>
-            </button>
+            <div>
+                <button
+                    className={heroStyles.arrow_down}
+                    onClick={() => scrollTo('#portfolio-preview')}>
+                    <i class='ri-arrow-down-s-line ri-2x'></i>
+                </button>
+            </div>
         </section>
     );
 };

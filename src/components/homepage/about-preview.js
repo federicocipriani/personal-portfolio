@@ -5,13 +5,22 @@ import profilePic from '../../images/profile.png';
 const AboutPreview = () => {
     return (
         <section id='about-me'>
-            <h2 className={aboutPreviewStyles.title}>About me</h2>
+            <div className={aboutPreviewStyles.section__content__header}>
+                <h2
+                    className={
+                        aboutPreviewStyles.section__content__header_title
+                    }>
+                    About me
+                </h2>
+            </div>
             <div className={aboutPreviewStyles.grid}>
-                <img
-                    src={profilePic}
-                    alt='Profile picture'
-                    className={aboutPreviewStyles.profile_pic}
-                />
+                <div className={aboutPreviewStyles.grid__picture}>
+                    <img
+                        src={profilePic}
+                        alt='Profile picture'
+                        className={aboutPreviewStyles.profile_pic}
+                    />
+                </div>
                 <div className={aboutPreviewStyles.paragraph}>
                     <p>
                         I am Federico, an aerospace engineer with a deep passion

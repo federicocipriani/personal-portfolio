@@ -1,5 +1,6 @@
 .footer {
     padding: 2rem 0 1rem;
+    color: var(--color3);
 }
 
 .links_row {
@@ -13,10 +14,10 @@
 
 .social_contacts__links__item {
     text-decoration: none;
-    color: black;
+    color: var(--color3);
     margin-right: 0.5rem;
     &:hover {
-        color: #02478c;
+        color: var(--color1);
     }
 }
 
@@ -24,8 +25,8 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    background-color: #ffffff;
-    color: #d4d4d4;
+    background-color: var(--color5);
+    color: var(--color3);
     font-weight: 300;
     outline: none;
     border: none;

@@ -36,6 +36,7 @@
 
 .page__card__paragraph__notvisible {
     display: none;
+    animation: disappear 1.2s ease-out -0.25s;
 }
 
 @keyframes appear {

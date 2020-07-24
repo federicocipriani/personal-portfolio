@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import '../styles/_variables.scss';
 
+@function hexToRGB($hex) {
+    @return red($hex), green($hex), blue($hex);
+}
+
+$color1: #30496c;
+$color2: #3f6e88;
+$color3: #88aac1;
+$color4: #c5e2e0;
+$color5: #f5f9f9;
+
+:root {
+    --color1: #{$color1};
+    --color2: #{$color2};
+    --color3: #{$color3};
+    --color4: #{$color4};
+    --color5: #{$color5};
+    --color1--rgb: #{hexToRGB($color1)};
+    --color2--rgb: #{hexToRGB($color2)};
+    --color3--rgb: #{hexToRGB($color3)};
+    --color4--rgb: #{hexToRGB($color4)};
+    --color5--rgb: #{hexToRGB($color5)};
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +33,7 @@
 
 body {
     background-color: $background-color;
-    // color: #414e54;
+    color: var(--color2);
     overflow-y: overlay;
     font-weight: 300;
 }
@@ -86,18 +109,10 @@ i {
     color: #fff;
 }
 
-// @media only screen and (max-width: 700px) {
-//     .page__title {
-//         padding-top: 28vh;
-//         font-size: 3rem;
-//         margin-bottom: 3rem;
-//     }
-// }
-
 // ----------------------------------------------
 // MEDIA QUERIES
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1441px) {
     h1 {
         font-size: 4rem;
     }
@@ -112,7 +127,7 @@ i {
         line-height: 1.75rem;
     }
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1440px) {
     .page__title {
         padding-top: 15%;
     }
