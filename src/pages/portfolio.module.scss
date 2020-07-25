@@ -1,78 +1,104 @@
 @import './src/styles/_variables.scss';
 
-.project_card {
+.page__content__card {
     display: flex;
     padding-bottom: 3rem;
 }
 
-.project_card__preview {
+.page__content__card_preview {
     width: 50%;
 }
 
-.project_card__preview__image {
+.page__content__card_preview_image {
     width: 100%;
     border-radius: 10px;
 }
 
-.project_card__content {
+.page__content__card_content {
     width: 50%;
     display: flex;
     flex-direction: column;
     padding-left: 2rem;
 }
 
-.project_card__title {
+.page__content__card_content_title {
     padding-bottom: 0.5rem;
 }
 
-.project_card__releaseDate {
+.page__content__card_content_releaseDate {
     padding-bottom: 1rem;
 }
 
-.project_card__description {
+.page__content__card_description {
     line-height: 1.25rem;
     padding-bottom: 0.5rem;
 }
 
-.project_card__languages {
+.page__content__card_content_languages {
     display: flex;
     margin-bottom: 1rem;
-    &__label {
-        color: #02478c;
-        border: 1px dotted #02478c;
-        opacity: 0.7;
+    &_label {
+        color: var(--color2);
+        border: 1px dotted var(--color2);
+        opacity: 0.8;
         padding: 0.15rem 0.5rem;
         margin-right: 0.3rem;
         border-radius: 10px;
     }
 }
 
-.project_card__links {
+.page__content__card_links {
     display: flex;
     align-items: flex-end;
     flex-grow: 1;
-    & > a {
-        width: 30%;
+    // & > a {
+    //     width: 30%;
+    //     justify-content: center;
+    //     margin-right: 0.5rem;
+    // }
+}
+
+.btn_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0.5rem 1.5rem;
+    margin: 0.5rem 0.5rem;
+    color: var(--color3);
+    border-radius: 1rem;
+    box-shadow: 3px 3px 8px 2px rgba(var(--color4--rgb), 0.6),
+        -3px -3px 6px 5px rgba(255, 255, 255, 0.9);
+    transition: all 0.5s ease-out;
+    & .icon {
+        display: flex;
         justify-content: center;
-        margin-right: 0.5rem;
+        align-items: center;
+        transition: all 0.6s ease-out;
+    }
+    &:hover {
+        color: var(--color1);
+        & .icon {
+            transform: rotate(360deg);
+        }
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    .project_card__links {
+    .page__content__card_links {
         & > a {
-            font-size: 1rem;
+            font-size: 0.8rem;
             width: 40%;
         }
     }
 }
 
 @media only screen and (min-width: 769px) {
-    .project_card__description {
+    .page__content__card_description {
         line-height: 1.75rem;
         padding-bottom: 0.5rem;
     }
-    .project_card__links {
+    .page__content__card_links {
         & > a {
             // font-size: 1rem;
             width: 40%;

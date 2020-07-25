@@ -2,19 +2,31 @@
 
 .page__content {
     display: flex;
+}
+
+.page__content_column_right {
+    display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
+    width: 60%;
+}
+.page__content_column_left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 40%;
 }
 
 .page__content__questions {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 70%;
 }
 
 .page__content__image {
-    padding: 1rem;
-    width: 50%;
+    padding: 0 1rem 2rem;
+    width: 100%;
 }
 
 .page__content__card__title {
@@ -78,16 +90,39 @@
     margin-bottom: 1rem;
 }
 
-.page__content__card__experience {
-    flex-basis: 50%;
-}
-
-.page__content__card__education {
-    list-style-position: inside;
-}
-
 .image {
     width: 100%;
+}
+
+.page__content__skills {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > h3 {
+        margin-bottom: 1rem;
+    }
+    & .page__content__skills_list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    & .page__content__skills_list > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    & .page__content__skills_list > div > i {
+        margin: 0.75rem;
+        padding: 0;
+    }
+    & .page__content__skills_list > div > svg {
+        margin: 0.75rem;
+        fill: var(--color2);
+    }
 }
 
 .page__content__contacts {
@@ -98,7 +133,11 @@
         align-items: center;
         padding-top: 0.3rem;
         &__click {
-            color: #02478c;
+            text-decoration: none;
+            color: var(--color3);
+            &:hover {
+                color: var(--color1);
+            }
         }
     }
 }

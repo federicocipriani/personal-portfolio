@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import questionStyles from './question.module.scss';
 import cx from 'classnames';
+import marked from 'marked';
 
 const Question = ({ id, title, content }) => {
     const [visibility, setVisibility] = useState(false);
 
     const toggle = () => {
         setVisibility(!visibility);
+    };
+
+    const getMarkdownText = (text) => {
+        var rawMarkup = marked(text, { sanitize: true });
+        return { __html: rawMarkup };
     };
 
     return (
@@ -36,7 +42,13 @@ const Question = ({ id, title, content }) => {
                         : questionStyles.page__card__paragraph__notvisible
                 }>
                 {content.map((item) => (
-                    <p>{item}</p>
+                    // <p
+                    //     className={
+                    //         questionStyles.page__card__paragraph__visible_paragraph
+                    //     }>
+                    //     {item}
+                    // </p>
+                    <p dangerouslySetInnerHTML={getMarkdownText(item)}></p>
                 ))}
             </div>
         </div>

@@ -19,7 +19,7 @@
     justify-content: center;
     align-items: center;
     width: 2rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.75s ease;
 }
 
 .page__content__card__header_chevron_active {
@@ -31,7 +31,11 @@
     padding-top: 1rem;
     padding-left: 2.1rem;
     line-height: 1.25rem;
-    animation: appear 1.2s ease-out -0.25s;
+    animation: appear 1.2s ease -0.25s;
+}
+
+.page__card__paragraph__visible_paragraph {
+    margin-bottom: 1rem;
 }
 
 .page__card__paragraph__notvisible {

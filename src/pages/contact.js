@@ -2,8 +2,14 @@ import React from 'react';
 import Layout from '../components/layout';
 import contactStyles from './contact.module.scss';
 import Head from '../components/head';
+import { useState } from 'react';
 
 const ContactPage = () => {
+    const [messageSent, setMessageSent] = useState(false);
+    const sentMessage = () => {
+        setMessageSent(!messageSent);
+    };
+
     return (
         <Layout>
             <Head title='Contact' />
@@ -59,16 +65,28 @@ const ContactPage = () => {
                                 className={contactStyles.textArea}
                             />
                             <div data-netlify-recaptcha='true'></div>
-                            <button
-                                type='submit'
-                                className='btn btn-left'
-                                style={{
-                                    display: 'flex',
-                                    alignItems: 'center',
-                                }}>
-                                <i class='ri-send-plane-fill'></i>
-                                Send
-                            </button>
+                            <div className={contactStyles.send_form}>
+                                <button
+                                    type='submit'
+                                    onClick={sentMessage}
+                                    className={contactStyles.btn_send}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                    }}>
+                                    <i class='ri-send-plane-fill'></i>
+                                    Send
+                                </button>
+                                <div
+                                    className={
+                                        messageSent
+                                            ? contactStyles.send_form_messageSent
+                                            : contactStyles.send_form_messageNotSent
+                                    }>
+                                    <i class='ri-check-line'></i>
+                                    <p>Message sent!</p>
+                                </div>
+                            </div>
                         </form>
                     </div>
                     <div className={contactStyles.social_contacts}>
