@@ -16,7 +16,7 @@ const Question = ({ id, title, content }) => {
     };
 
     return (
-        <div>
+        <div className={questionStyles.page__card}>
             <div className={questionStyles.page__card__header}>
                 <button
                     id={id}

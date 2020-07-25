@@ -1,0 +1,25 @@
+.page {
+    position: relative;
+    height: 100vh;
+}
+
+.page__content {
+    position: absolute;
+    top: 30%;
+    color: var(--color3);
+}
+
+.backHome {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--color2);
+}
+
+.image_container {
+    position: absolute;
+    width: 45%;
+    right: -2rem;
+    bottom: 3rem;
+}
