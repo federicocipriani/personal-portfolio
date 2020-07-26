@@ -88,26 +88,27 @@ const PortfolioPreview = () => (
                                         }>
                                         {edge.node.shortDescription}
                                     </p>
-                                    <div
-                                        className={
-                                            portfolioPreviewStyles.section__content__showcase__card_details_labels
-                                        }>
-                                        {edge.node.languages.map((language) => (
-                                            <p
-                                                className={
-                                                    portfolioPreviewStyles.section__content__showcase__card_details_labels_language
-                                                }>
-                                                {language.language}
-                                            </p>
-                                        ))}
-                                    </div>
+                                </div>
+                                <div
+                                    className={
+                                        portfolioPreviewStyles.section__content__showcase__card_details_labels
+                                    }>
+                                    {edge.node.languages.map((language) => (
+                                        <p
+                                            className={
+                                                portfolioPreviewStyles.section__content__showcase__card_details_labels_language
+                                            }>
+                                            {language.language}
+                                        </p>
+                                    ))}
                                 </div>
                                 <Link
                                     to={`/portfolio/#${edge.node.slug}`}
                                     className={
                                         portfolioPreviewStyles.btn_viewmore
                                     }>
-                                    View more
+                                    View more{' '}
+                                    <i class='ri-arrow-right-s-line'></i>
                                 </Link>
                                 {/* <div
                                     className={

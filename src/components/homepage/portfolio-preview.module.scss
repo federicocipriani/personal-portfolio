@@ -14,6 +14,7 @@
 }
 
 .section__content {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -72,11 +73,6 @@
         -3px -3px 8px 5px rgba(255, 255, 255, 0.8);
 }
 
-.section__content__showcase__card:hover {
-    // transform: scale(1.05);
-    // box-shadow: 5px 5px 15px #d4d4d4, -5px 5px 15px #d4d4d4;
-}
-
 .section__content__showcase__card_image {
     width: 100%;
     justify-self: center;
@@ -88,6 +84,7 @@
 .section__content__showcase__card_details {
     // background-color: #0282c3;
     padding: 1rem;
+    flex-grow: 1;
     // margin-top: -1rem;
 }
 
@@ -97,15 +94,15 @@
 
 .section__content__showcase__card_details_description {
     margin-bottom: 1rem;
-    flex-grow: 1;
+    // flex-grow: 1;
 }
 
 .section__content__showcase__card_details_labels {
     display: flex;
-    align-items: flex-start;
-    justify-self: end;
+    // align-items: flex-start;
+    // justify-self: end;
     flex-wrap: wrap;
-    padding: 1px 0;
+    padding: 0 1rem 1rem;
 }
 
 .section__content__showcase__card_details_labels_language {
@@ -117,31 +114,25 @@
     padding: 0.1rem 0.3rem;
 }
 
-// .btn_viewmore_container {
-//     align-self: flex-end;
-//     padding: 0.5rem 1rem;
-//     margin: 0 1rem 1rem;
-//     border-radius: 1rem;
-//     transition: box-shadow 0.5s ease;
-//     &:hover {
-//         box-shadow: 3px 3px 12px 2px rgba(var(--color4--rgb), 0.4),
-//             -3px -3px 8px 5px rgba(255, 255, 255, 0.8);
-//         color: var(--color2);
-//     }
-// }
-
 .btn_viewmore {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: flex;
+    justify-content: center;
     align-self: flex-end;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    margin: 0 1rem 1rem;
+    margin: 0 0.5rem 0.5rem;
     color: var(--color3);
     border-radius: 1rem;
     transition: all 0.5s ease-out;
+    & > i {
+        padding: 0;
+    }
     &:hover {
         box-shadow: 3px 3px 12px 2px rgba(var(--color4--rgb), 0.6),
             -3px -3px 8px 5px rgba(255, 255, 255, 0.8);
-        background-color: rgba(var(--color4--rgb), 0.2);
+        // background-color: rgba(var(--color4--rgb), 0.2);
         color: var(--color1);
     }
 }
