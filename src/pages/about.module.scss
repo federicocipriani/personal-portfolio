@@ -1,33 +1,40 @@
 @import './src/styles/_variables.scss';
 
 .page__content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        'questions skills'
+        'contacts contacts';
 }
 
 .page__content_column_right {
+    grid-area: questions;
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
-    width: 60%;
+    width: 95%;
 }
 .page__content_column_left {
+    grid-area: skills;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-end;
     margin-bottom: 1rem;
-    width: 40%;
+    width: 100%;
 }
 
 .page__content__questions {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
 }
 
 .page__content__image {
     margin-top: -4rem;
     padding: 0 1rem 2rem;
-    width: 100%;
+    width: 90%;
 }
 
 .page__content__card__title {
@@ -96,7 +103,7 @@
 }
 
 .page__content__skills {
-    margin-top: -2rem;
+    margin-top: 0;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -128,15 +135,16 @@
 }
 
 .page__content__contacts {
+    grid-area: contacts;
     padding-top: 4rem;
     padding-bottom: 1rem;
     &__link {
-        display: flex;
-        align-items: center;
         padding-top: 0.3rem;
         &__click {
+            display: inline-flex;
             text-decoration: none;
-            color: var(--color3);
+            line-height: 1rem;
+            color: var(--color2);
             &:hover {
                 color: var(--color1);
             }
@@ -147,17 +155,24 @@
 // ----------------------------------------------
 // MEDIA QUERIES
 
-@media (max-width: 425px) {
+@media only screen and (max-width: 900px) {
     .page__content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        grid-template-areas:
+            'questions'
+            'skills'
+            'contacts';
     }
-    .page__content_column_right {
+    .page__content__image {
+        margin-top: 0;
         width: 100%;
     }
-    .page__content_column_left {
+    .page__content__skills {
+        padding: 0 1rem;
         width: 100%;
     }
-    .page__content__questions {
-        width: 100%;
+    .page__content__contacts {
+        padding: 2rem 0;
     }
 }

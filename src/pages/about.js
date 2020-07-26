@@ -13,7 +13,9 @@ const AboutPage = () => {
             <section className='page'>
                 <h1 className='page__title'>About</h1>
                 <div className={aboutStyle.page__content}>
-                    <div className={aboutStyle.page__content_column_right}>
+                    <div
+                        id='questions'
+                        className={aboutStyle.page__content_column_right}>
                         <div className={aboutStyle.page__content__questions}>
                             {pageContent.map((question) => (
                                 <Question
@@ -23,25 +25,10 @@ const AboutPage = () => {
                                 />
                             ))}
                         </div>
-                        <div className={aboutStyle.page__content__contacts}>
-                            <h3>Do you want to drop me a message?</h3>
-                            <div
-                                className={
-                                    aboutStyle.page__content__contacts__link
-                                }>
-                                <Link
-                                    to='/contact'
-                                    className={
-                                        aboutStyle.page__content__contacts__link__click
-                                    }>
-                                    Click me
-                                </Link>
-                                <i class='ri-cursor-fill'></i>
-                                and I will bring you to the right place
-                            </div>
-                        </div>
                     </div>
-                    <div className={aboutStyle.page__content_column_left}>
+                    <div
+                        id='skills'
+                        className={aboutStyle.page__content_column_left}>
                         <div className={aboutStyle.page__content__image}>
                             <img
                                 src={image}
@@ -87,6 +74,32 @@ const AboutPage = () => {
                                     <p>Git</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    <div
+                        id='contacts'
+                        className={aboutStyle.page__content__contacts}>
+                        <h3>Do you want to drop me a message?</h3>
+                        <div
+                            className={
+                                aboutStyle.page__content__contacts__link
+                            }>
+                            <Link
+                                to='/contact'
+                                className={
+                                    aboutStyle.page__content__contacts__link__click
+                                }>
+                                <span
+                                    style={{
+                                        fontWeight: '400',
+                                        textDecoration: 'underline',
+                                    }}>
+                                    {' '}
+                                    Click here
+                                </span>{' '}
+                                <i class='ri-cursor-fill'></i>
+                            </Link>
+                            and I will bring you to the right place
                         </div>
                     </div>
                 </div>

@@ -54,7 +54,10 @@
     color: var(--color1);
 }
 
-@media only screen and (max-width: 768px) {
+// ----------------------------------------------
+// MEDIA QUERIES
+
+@media only screen and (max-width: 900px) {
     .paragraph {
         padding-left: 2rem;
     }
