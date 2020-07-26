@@ -1,12 +1,5 @@
 @import './src/styles/_variables.scss';
 
-// .container {
-//     margin: 3rem 0;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-// }
-
 .section__content__header {
     width: 100%;
 }
@@ -55,11 +48,11 @@
     font-weight: 400;
 }
 
-// @media only screen and (max-width: 992px) {
-//     .paragraph {
-//         padding-left: 1.5rem;
-//     }
-// }
+.link_about {
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--color1);
+}
 
 @media only screen and (max-width: 768px) {
     .paragraph {
@@ -68,12 +61,18 @@
 }
 
 @media only screen and (max-width: 425px) {
-    .title {
-        font-size: 1.5rem;
+    .section__content__header_title {
+        display: block;
+        text-align: center;
     }
+
     .grid {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(2, auto);
+    }
+
+    .grid__picture {
+        margin: auto;
     }
 
     .profile_pic {
@@ -81,12 +80,6 @@
     }
 
     .paragraph {
-        padding-top: 2rem;
+        padding: 1rem 0;
     }
 }
-
-// @media only screen and (max-width: 768px) {
-//     .paragraph {
-//         padding-left: 3rem;
-//     }
-// }

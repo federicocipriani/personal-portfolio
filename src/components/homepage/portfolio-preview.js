@@ -110,25 +110,14 @@ const PortfolioPreview = () => (
                                     View more{' '}
                                     <i class='ri-arrow-right-s-line'></i>
                                 </Link>
-                                {/* <div
-                                    className={
-                                        portfolioPreviewStyles.btn_viewmore_container
-                                    }>
-                                    <Link
-                                        to={`/portfolio/#${edge.node.slug}`}
-                                        className={
-                                            portfolioPreviewStyles.btn_viewmore
-                                        }>
-                                        View more
-                                    </Link>
-                                </div> */}
                             </div>
                         ))}
                     </div>
                     <Link
                         to='/portfolio'
                         className={portfolioPreviewStyles.btn_portfolio}>
-                        Do you want to see more?
+                        Do you want to see more?{' '}
+                        <i class='ri-arrow-right-s-line'></i>
                     </Link>
                 </div>
             </section>

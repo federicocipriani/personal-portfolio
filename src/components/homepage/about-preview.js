@@ -1,6 +1,7 @@
 import React from 'react';
 import aboutPreviewStyles from './about-preview.module.scss';
 import profilePic from '../../images/profile.png';
+import { Link } from 'gatsby';
 
 const AboutPreview = () => {
     return (
@@ -50,6 +51,24 @@ const AboutPreview = () => {
                         eight wonder of the modern world". And as Peter Thiel
                         suggests, we live in a "power law" world. I am here to
                         see where I can get.
+                    </p>
+                    <br />
+                    <p>
+                        This is just a brief introduction. If you are interested
+                        in reading a little bit more,{' '}
+                        <Link
+                            to={`/about`}
+                            className={aboutPreviewStyles.link_about}>
+                            <span
+                                style={{
+                                    fontWeight: '400',
+                                    textDecoration: 'underline',
+                                }}>
+                                {' '}
+                                click here
+                            </span>
+                            . <i class='ri-cursor-fill'></i>
+                        </Link>
                     </p>
                 </div>
             </div>

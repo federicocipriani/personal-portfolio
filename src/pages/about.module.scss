@@ -143,3 +143,21 @@
         }
     }
 }
+
+// ----------------------------------------------
+// MEDIA QUERIES
+
+@media (max-width: 425px) {
+    .page__content {
+        flex-direction: column;
+    }
+    .page__content_column_right {
+        width: 100%;
+    }
+    .page__content_column_left {
+        width: 100%;
+    }
+    .page__content__questions {
+        width: 100%;
+    }
+}

@@ -4,7 +4,6 @@ import aboutStyle from './about.module.scss';
 import Question from '../components/about/question';
 import Head from '../components/head';
 import image from '../images/about_me.png';
-import jslogo from '../images/logo-javascript.svg';
 import { Link } from 'gatsby';
 
 const AboutPage = () => {

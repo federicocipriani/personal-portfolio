@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
+import logo from '../images/logofc.png';
 
 import headerStyles from './header.module.scss';
 
@@ -20,11 +21,11 @@ const Header = () => {
     return (
         <header className={headerStyles.header}>
             <div className={headerStyles.header__container}>
-                <p>
-                    <Link className={headerStyles.title} to='/'>
-                        FC
+                <div className={headerStyles.logo}>
+                    <Link to='/'>
+                        <img src={logo} alt='Website logo' />
                     </Link>
-                </p>
+                </div>
                 <div className={headerStyles.header__navigation_container}>
                     <div
                         className={

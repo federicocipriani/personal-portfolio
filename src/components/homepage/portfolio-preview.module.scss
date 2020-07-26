@@ -138,6 +138,9 @@
 }
 
 .btn_portfolio {
+    font-size: 1rem;
+    line-height: 1rem;
+    display: flex;
     text-decoration: none;
     padding: 0.5rem 1.5rem;
     margin: 0 1rem 1rem;
@@ -146,6 +149,9 @@
     box-shadow: 3px 3px 8px 2px rgba(var(--color4--rgb), 0.4),
         -3px -3px 8px 5px rgba(255, 255, 255, 0.9);
     transition: all 0.5s ease-out;
+    & > i {
+        padding-left: 0.5rem;
+    }
     &:hover {
         color: var(--color1);
     }
@@ -172,14 +178,15 @@
 
 @media only screen and (max-width: 768px) {
     .section__container::before {
-        height: 220px;
+        height: 15rem;
     }
-    .display {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+
+    .section__content__header_title {
+        text-align: center;
     }
-    .card {
-        margin: 1rem;
+
+    .section__content__header_text {
+        padding-left: 0;
+        margin-bottom: 0;
     }
 }
