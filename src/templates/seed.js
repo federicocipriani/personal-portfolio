@@ -60,17 +60,19 @@ const Seed = (props) => {
             <Head title={props.data.contentfulBlogPost.title} />
             <section className='page'>
                 <h1 className='page__title'>Digital Garden</h1>
-                <div className={seedStyles.page__content}>
-                    <h2 className={seedStyles.title}>
-                        {props.data.contentfulBlogPost.title}
-                    </h2>
-                    <p className={seedStyles.date}>
-                        {props.data.contentfulBlogPost.publishedDate}
-                    </p>
-                    {documentToReactComponents(
-                        props.data.contentfulBlogPost.body.json,
-                        options
-                    )}
+                <div className={seedStyles.page__content_container}>
+                    <div className={seedStyles.page__content}>
+                        <h2 className={seedStyles.title}>
+                            {props.data.contentfulBlogPost.title}
+                        </h2>
+                        <p className={seedStyles.date}>
+                            {props.data.contentfulBlogPost.publishedDate}
+                        </p>
+                        {documentToReactComponents(
+                            props.data.contentfulBlogPost.body.json,
+                            options
+                        )}
+                    </div>
                 </div>
             </section>
         </Layout>

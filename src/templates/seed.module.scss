@@ -1,4 +1,16 @@
+.page__content_container {
+    display: flex;
+    justify-content: center;
+}
+
+.page__content {
+    width: 70%;
+}
+
 .title {
+    // text-transform: uppercase;
+    // font-weight: 400;
+    padding-top: 1rem;
     margin-bottom: 1rem;
 }
 
@@ -34,4 +46,13 @@
 .link {
     font-weight: 400;
     color: var(--color1);
+}
+
+// ----------------------------------------------
+// MEDIA QUERIES
+
+@media only screen and (max-width: 900px) {
+    .page__content {
+        width: 100%;
+    }
 }
