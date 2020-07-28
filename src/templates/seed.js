@@ -31,7 +31,7 @@ const Seed = (props) => {
                 const url = node.data.target.fields.file['en-US'].url;
                 return (
                     <div className={seedStyles.image_container}>
-                        <img alt={alt} src={url} className={seedStyles.image} />
+                        <img src={url} alt={alt} className={seedStyles.image} />
                     </div>
                 );
             },
@@ -44,7 +44,11 @@ const Seed = (props) => {
             [INLINES.HYPERLINK]: (node, children) => {
                 const url = node.data.uri;
                 return (
-                    <a href={url} className={seedStyles.link} target='_blank'>
+                    <a
+                        href={url}
+                        className={seedStyles.link}
+                        target='_blank'
+                        rel='noreferrer'>
                         {children}
                     </a>
                 );
