@@ -1,6 +1,6 @@
 import React from 'react';
 import aboutPreviewStyles from './about-preview.module.scss';
-import profilePic from '../../images/profile.png';
+import ProfilePic from '../../images/profile.png';
 import { Link } from 'gatsby';
 
 const AboutPreview = () => {
@@ -17,7 +17,7 @@ const AboutPreview = () => {
             <div className={aboutPreviewStyles.grid}>
                 <div className={aboutPreviewStyles.grid__picture}>
                     <img
-                        src={profilePic}
+                        src={ProfilePic}
                         alt='Profile picture'
                         className={aboutPreviewStyles.profile_pic}
                     />
