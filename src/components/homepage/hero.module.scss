@@ -81,7 +81,10 @@
     .image_container {
         right: -1rem;
         width: 40%;
-        bottom: -4rem;
+        bottom: 0;
+    }
+    .arrow_down {
+        bottom: 6rem;
     }
 }
 
@@ -89,7 +92,10 @@
     .image_container {
         right: -1rem;
         width: 60%;
-        bottom: -4rem;
+        bottom: 0;
+    }
+    .arrow_down {
+        bottom: 6rem;
     }
 }
 
