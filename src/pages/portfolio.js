@@ -44,85 +44,110 @@ const PortfolioPage = () => (
                     <div className={portfolioStyle.page__content}>
                         {data.allContentfulProject.edges.map((edge) => (
                             <div
-                                id={`#${edge.node.slug}`}
-                                key={edge.node.id}
-                                className={portfolioStyle.page__content__card}>
+                                className={
+                                    portfolioStyle.page__content__card_container
+                                }>
                                 <div
+                                    id={`${edge.node.slug}`}
                                     className={
-                                        portfolioStyle.page__content__card_preview
-                                    }>
-                                    <img
-                                        src={edge.node.projectPreview.fluid.src}
-                                        alt=''
-                                        loading='lazy'
-                                        className={
-                                            portfolioStyle.page__content__card_preview_image
-                                        }
-                                    />
-                                </div>
+                                        portfolioStyle.page__content__card_container_header
+                                    }></div>
                                 <div
+                                    id={`${edge.node.slug}`}
+                                    key={edge.node.id}
                                     className={
-                                        portfolioStyle.page__content__card_content
+                                        portfolioStyle.page__content__card
                                     }>
-                                    <h2
-                                        className={
-                                            portfolioStyle.page__content__card_content_title
-                                        }>
-                                        {edge.node.projectName}
-                                    </h2>
-
-                                    <p
-                                        className={
-                                            portfolioStyle.page__content__card_content_releaseDate
-                                        }>
-                                        {edge.node.releaseDate}
-                                    </p>
                                     <div
                                         className={
-                                            portfolioStyle.page__content__card_content_languages
+                                            portfolioStyle.page__content__card_preview
                                         }>
-                                        {edge.node.languages.map((language) => (
-                                            <p
-                                                className={
-                                                    portfolioStyle.page__content__card_content_languages_label
-                                                }>
-                                                {language.language}
-                                            </p>
-                                        ))}
+                                        <img
+                                            src={
+                                                edge.node.projectPreview.fluid
+                                                    .src
+                                            }
+                                            alt=''
+                                            loading='lazy'
+                                            className={
+                                                portfolioStyle.page__content__card_preview_image
+                                            }
+                                        />
                                     </div>
-                                    <p
-                                        className={
-                                            portfolioStyle.page__content__card_description
-                                        }>
-                                        {edge.node.fullDescription}
-                                    </p>
-
                                     <div
                                         className={
-                                            portfolioStyle.page__content__card_links
+                                            portfolioStyle.page__content__card_content
                                         }>
-                                        <a
-                                            href={edge.node.projectUrl}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className={portfolioStyle.btn_link}>
-                                            <span
-                                                className={portfolioStyle.icon}>
-                                                <i class='ri-external-link-line'></i>{' '}
-                                            </span>
-                                            Website
-                                        </a>
-                                        <a
-                                            href={edge.node.githubUrl}
-                                            target='_blank'
-                                            rel='noopener noreferrer'
-                                            className={portfolioStyle.btn_link}>
-                                            <span
-                                                className={portfolioStyle.icon}>
-                                                <i class='ri-github-line'></i>
-                                            </span>
-                                            GitHub
-                                        </a>
+                                        <h2
+                                            className={
+                                                portfolioStyle.page__content__card_content_title
+                                            }>
+                                            {edge.node.projectName}
+                                        </h2>
+
+                                        <p
+                                            className={
+                                                portfolioStyle.page__content__card_content_releaseDate
+                                            }>
+                                            {edge.node.releaseDate}
+                                        </p>
+                                        <div
+                                            className={
+                                                portfolioStyle.page__content__card_content_languages
+                                            }>
+                                            {edge.node.languages.map(
+                                                (language) => (
+                                                    <p
+                                                        className={
+                                                            portfolioStyle.page__content__card_content_languages_label
+                                                        }>
+                                                        {language.language}
+                                                    </p>
+                                                )
+                                            )}
+                                        </div>
+                                        <p
+                                            className={
+                                                portfolioStyle.page__content__card_description
+                                            }>
+                                            {edge.node.fullDescription}
+                                        </p>
+
+                                        <div
+                                            className={
+                                                portfolioStyle.page__content__card_links
+                                            }>
+                                            <a
+                                                href={edge.node.projectUrl}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                className={
+                                                    portfolioStyle.btn_link
+                                                }>
+                                                <span
+                                                    className={
+                                                        portfolioStyle.icon
+                                                    }>
+                                                    <i class='ri-external-link-line'></i>{' '}
+                                                </span>
+                                                Website
+                                            </a>
+                                            <a
+                                                href={edge.node.githubUrl}
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                className={
+                                                    portfolioStyle.btn_link
+                                                }>
+                                                <span
+                                                    className={
+                                                        portfolioStyle.icon
+                                                    }>
+                                                    <i class='ri-github-line'></i>
+                                                </span>
+                                                GitHub
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

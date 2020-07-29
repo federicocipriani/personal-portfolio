@@ -8,7 +8,7 @@
     left: 0;
     width: 100vw;
     height: 6rem;
-    padding: 1em 0;
+    padding: 1rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,9 +96,12 @@
     // }
 }
 
+// ----------------------------------------------
+// MEDIA QUERIES
+
 @media only screen and (max-width: 900px) {
     .header {
-        height: auto;
+        height: 15rem;
     }
 
     .header__container {
@@ -107,8 +110,12 @@
         flex-direction: column;
     }
 
-    .logo {
-        margin-bottom: 0.5rem;
+    // .logo {
+    //     margin-bottom: 0.5rem;
+    // }
+
+    .header__navigation_container_container {
+        padding: 1rem 0;
     }
 
     .nav__list {

@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import portfolioPreviewStyles from './portfolio-preview.module.scss';
 import { graphql, StaticQuery, Link } from 'gatsby';
-import cx from 'classnames';
+import { AnchorLink } from 'gatsby-plugin-anchor-links';
 
 const PortfolioPreview = () => (
     <StaticQuery
@@ -102,14 +102,14 @@ const PortfolioPreview = () => (
                                         </p>
                                     ))}
                                 </div>
-                                <Link
-                                    to={`/portfolio/#${edge.node.slug}`}
+                                <AnchorLink
+                                    to={`/portfolio#${edge.node.slug}`}
                                     className={
                                         portfolioPreviewStyles.btn_viewmore
                                     }>
                                     View more{' '}
                                     <i class='ri-arrow-right-s-line'></i>
-                                </Link>
+                                </AnchorLink>
                             </div>
                         ))}
                     </div>
