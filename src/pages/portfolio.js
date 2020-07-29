@@ -44,6 +44,7 @@ const PortfolioPage = () => (
                     <div className={portfolioStyle.page__content}>
                         {data.allContentfulProject.edges.map((edge) => (
                             <div
+                                id={`#${edge.node.slug}`}
                                 key={edge.node.id}
                                 className={portfolioStyle.page__content__card}>
                                 <div
@@ -64,7 +65,6 @@ const PortfolioPage = () => (
                                         portfolioStyle.page__content__card_content
                                     }>
                                     <h2
-                                        id={`#${edge.node.slug}`}
                                         className={
                                             portfolioStyle.page__content__card_content_title
                                         }>
