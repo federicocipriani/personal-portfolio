@@ -28,10 +28,13 @@ const Seed = (props) => {
         renderNode: {
             'embedded-asset-block': (node) => {
                 const alt = node.data.target.fields.title['en-US'];
-                const url = node.data.target.fields.file['en-US'].url;
+                const urlImg = node.data.target.fields.file['en-US'].url;
                 return (
                     <div className={seedStyles.image_container}>
-                        <img src={url} alt={alt} className={seedStyles.image} />
+                        <div
+                            className={seedStyles.image}
+                            style={{ backgroundImage: 'url(urlImg)' }}></div>
+                        {/* <img src={url} alt={alt} className={seedStyles.image} /> */}
                     </div>
                 );
             },
