@@ -30,12 +30,15 @@ const Seed = (props) => {
                 const alt = node.data.target.fields.title['en-US'];
                 const urlImg = node.data.target.fields.file['en-US'].url;
                 return (
-                    <div className={seedStyles.image_container}>
-                        <div
-                            className={seedStyles.image}
-                            style={{ backgroundImage: 'url(urlImg)' }}></div>
-                        {/* <img src={url} alt={alt} className={seedStyles.image} /> */}
-                    </div>
+                    <img src={url} alt={alt} className={seedStyles.image} />
+                    // <div
+                    //     style={{ backgroundImage: 'url(urlImg)' }}
+                    //     className={seedStyles.image_container}>
+                    //     <div
+                    //         className={seedStyles.image}
+                    //         style={{ backgroundImage: 'url(urlImg)' }}></div>
+                    //     <img src={url} alt={alt} className={seedStyles.image} />
+                    // </div>
                 );
             },
             [BLOCKS.PARAGRAPH]: (node, children) => (
