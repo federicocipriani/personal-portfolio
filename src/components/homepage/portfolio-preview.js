@@ -35,6 +35,10 @@ const PortfolioPreview = () => (
             <section
                 id='portfolio-preview'
                 className={portfolioPreviewStyles.section__container}>
+                <div
+                    className={
+                        portfolioPreviewStyles.section__whitespace
+                    }></div>
                 <div className={portfolioPreviewStyles.section__content}>
                     <div
                         className={
