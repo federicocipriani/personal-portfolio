@@ -32,10 +32,9 @@ const PortfolioPreview = () => (
             }
         `}
         render={(data) => (
-            <section
-                id='portfolio-preview'
-                className={portfolioPreviewStyles.section__container}>
+            <section className={portfolioPreviewStyles.section__container}>
                 <div
+                    id='portfolio-preview'
                     className={
                         portfolioPreviewStyles.section__whitespace
                     }></div>
