@@ -4,6 +4,7 @@ module.exports = {
         author: 'Federico Cipriani',
     },
     plugins: [
+        'gatsby-plugin-recaptcha',
         'gatsby-plugin-anchor-links',
         'gatsby-plugin-smoothscroll',
         'gatsby-plugin-react-helmet',

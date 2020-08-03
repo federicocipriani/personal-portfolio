@@ -14,10 +14,10 @@ const Header = () => {
             }
         }
     `);
-    const isPartiallyActive = ({ isPartiallyCurrent }) =>
-        isPartiallyCurrent
-            ? { className: headerStyles.active_nav__item }
-            : null;
+    // const isPartiallyActive = ({ isPartiallyCurrent }) =>
+    //     isPartiallyCurrent
+    //         ? { className: headerStyles.active_nav__item }
+    //         : null;
     return (
         <header className={headerStyles.header}>
             <div className={headerStyles.header__container}>
@@ -49,7 +49,8 @@ const Header = () => {
                                         activeClassName={
                                             headerStyles.active_nav__item
                                         }
-                                        to='/about'>
+                                        to='/about'
+                                        partiallyActive={true}>
                                         About
                                     </Link>
                                 </li>
@@ -60,7 +61,7 @@ const Header = () => {
                                             headerStyles.active_nav__item
                                         }
                                         to='/portfolio'
-                                        getProps={isPartiallyActive}>
+                                        partiallyActive={true}>
                                         Portfolio
                                     </Link>
                                 </li>
@@ -70,7 +71,8 @@ const Header = () => {
                                         activeClassName={
                                             headerStyles.active_nav__item
                                         }
-                                        to='/digital-garden'>
+                                        to='/digital-garden'
+                                        partiallyActive={true}>
                                         Digital Garden
                                     </Link>
                                 </li>
@@ -80,7 +82,8 @@ const Header = () => {
                                         activeClassName={
                                             headerStyles.active_nav__item
                                         }
-                                        to='/contact'>
+                                        to='/contact'
+                                        partiallyActive={true}>
                                         Contact
                                     </Link>
                                 </li>
