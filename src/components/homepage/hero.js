@@ -18,6 +18,8 @@ const Hero = () => {
                         style={{
                             color: 'var(--color2)',
                             textDecoration: 'underline dashed',
+                            WebkitTextDecorationStyle: 'dashed',
+                            WebkitTextDecorationLine: 'underline',
                         }}>
                         AI
                     </span>
@@ -26,6 +28,8 @@ const Hero = () => {
                         style={{
                             color: 'var(--color2)',
                             textDecoration: 'underline dashed',
+                            WebkitTextDecorationStyle: 'dashed',
+                            WebkitTextDecorationLine: 'underline',
                         }}>
                         coding
                     </span>{' '}
@@ -34,6 +38,8 @@ const Hero = () => {
                         style={{
                             color: 'var(--color2)',
                             textDecoration: 'underline dashed',
+                            WebkitTextDecorationStyle: 'dashed',
+                            WebkitTextDecorationLine: 'underline',
                         }}>
                         design
                     </span>
