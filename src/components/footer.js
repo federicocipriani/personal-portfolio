@@ -24,21 +24,21 @@ const Footer = () => {
                     <a
                         href='https://www.linkedin.com/in/federicocipriani/'
                         target='_blank'
-                        rel='noreferrer'
+                        rel='noopener noreferrer'
                         className={footerStyles.social_contacts__links__item}>
                         <i class='ri-linkedin-line'></i>
                     </a>
                     <a
                         href='https://twitter.com/cipriani_fc'
                         target='_blank'
-                        rel='noreferrer'
+                        rel='noopener noreferrer'
                         className={footerStyles.social_contacts__links__item}>
                         <i class='ri-twitter-line'></i>
                     </a>
                     <a
                         href='https://github.com/federicocipriani'
                         target='_blank'
-                        rel='noreferrer'
+                        rel='noopener noreferrer'
                         className={footerStyles.social_contacts__links__item}>
                         <i class='ri-github-line'></i>
                     </a>

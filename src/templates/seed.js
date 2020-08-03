@@ -54,7 +54,7 @@ const Seed = (props) => {
                         href={url}
                         className={seedStyles.link}
                         target='_blank'
-                        rel='noreferrer'>
+                        rel='noopener noreferrer'>
                         {children}
                     </a>
                 );

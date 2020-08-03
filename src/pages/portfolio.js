@@ -25,7 +25,9 @@ const PortfolioPage = () => (
                             }
                             releaseDate(formatString: "MMMM D, YYYY")
                             shortDescription
-                            fullDescription
+                            fullDescription {
+                                fullDescription
+                            }
                             projectUrl
                             githubUrl
                             languages {
@@ -110,7 +112,10 @@ const PortfolioPage = () => (
                                             className={
                                                 portfolioStyle.page__content__card_description
                                             }>
-                                            {edge.node.fullDescription}
+                                            {
+                                                edge.node.fullDescription
+                                                    .fullDescription
+                                            }
                                         </p>
 
                                         <div
@@ -120,7 +125,7 @@ const PortfolioPage = () => (
                                             <a
                                                 href={edge.node.projectUrl}
                                                 target='_blank'
-                                                rel='noreferrer'
+                                                rel='noopener noreferrer'
                                                 className={
                                                     portfolioStyle.btn_link
                                                 }>
@@ -135,7 +140,7 @@ const PortfolioPage = () => (
                                             <a
                                                 href={edge.node.githubUrl}
                                                 target='_blank'
-                                                rel='noreferrer'
+                                                rel='noopener noreferrer'
                                                 className={
                                                     portfolioStyle.btn_link
                                                 }>
