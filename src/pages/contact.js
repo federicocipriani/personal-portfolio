@@ -45,7 +45,18 @@ class ContactPage extends React.Component {
                             <h2 className={contactStyles.contact_form__label}>
                                 Get in touch!
                             </h2>
-                            <form onSubmit={this.handleSubmit}>
+                            <form
+                                method='post'
+                                netlify-honeypot='bot-field'
+                                data-netlify='true'
+                                name='contact'
+                                onSubmit={this.handleSubmit}>
+                                <input type='hidden' name='bot-field' />
+                                <input
+                                    type='hidden'
+                                    name='form-name'
+                                    value='contact'
+                                />
                                 <input
                                     type='text'
                                     name='name'
