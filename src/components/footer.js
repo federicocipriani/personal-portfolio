@@ -15,7 +15,10 @@ const Footer = () => {
     `);
     return (
         <footer className={footerStyles.footer}>
-            <p>Created by {data.site.siteMetadata.author} © 2020</p>
+            <p>
+                Created by {data.site.siteMetadata.author} with{' '}
+                <em>Gatsby and Contentful</em> © 2020
+            </p>
             <div className={footerStyles.links_row}>
                 <div className={footerStyles.social_contacts__links}>
                     <a

@@ -25,17 +25,20 @@ const AboutPreview = () => {
                 <div className={aboutPreviewStyles.paragraph}>
                     <p>
                         I am Federico, an aerospace engineer with a deep passion
-                        for data, coding and design. I consider myself a
-                        creative developer who loves analysing data.{' '}
+                        for AI, coding and design. I consider myself a creative
+                        developer who loves analysing data and potentially use
+                        them to create amazing things. I keep working on my
+                        skills and my goal is to become{' '}
                         <span style={{ fontWeight: '400' }}>
-                            A hybrid between a front-end developer and a data
-                            scientist.
-                        </span>{' '}
-                        I love seeing and creating beautifully designed and
-                        pixel-perfect things. Though, I am also an engineer deep
-                        inside. Hence, I love solving problems, building things
-                        and see the results immediately (if things do not break,
-                        clearly).{' '}
+                            a hybrid between a front-end developer and a ML
+                            engineer
+                        </span>
+                        , a hybrid that can create useful applications that
+                        interact with the user. I love seeing and creating
+                        beautifully designed and pixel-perfect things. Though, I
+                        am also an engineer deep inside. Hence, I love solving
+                        problems, building things and see the results
+                        immediately (if things do not break, clearly).{' '}
                         <span style={{ fontWeight: '400' }}>
                             That is why I love coding.
                         </span>{' '}
@@ -49,8 +52,8 @@ const AboutPreview = () => {
                         everyday to become 1% better than the day before. As
                         (perhaps) Albert Einstein once said "compound is the
                         eight wonder of the modern world". And as Peter Thiel
-                        suggests, we live in a "power law" world. I am here to
-                        see where I can get.
+                        suggests, following Einstein's quote, we live in a
+                        "power law" world. I am keen to see where I can get.
                     </p>
                     <br />
                     <p>
