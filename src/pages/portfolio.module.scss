@@ -9,6 +9,7 @@
     width: 100%;
     height: 6rem;
     top: -6rem;
+    z-index: -1;
 }
 
 .page__content__card {
@@ -71,6 +72,7 @@
 }
 
 .btn_link {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;

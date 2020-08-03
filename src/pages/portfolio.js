@@ -3,7 +3,7 @@ import Layout from '../components/layout';
 import portfolioStyle from './portfolio.module.scss';
 import Head from '../components/head';
 import { StaticQuery, Link } from 'gatsby';
-import cx from 'classnames';
+import { graphql } from 'gatsby';
 
 const PortfolioPage = () => (
     <StaticQuery
@@ -120,7 +120,7 @@ const PortfolioPage = () => (
                                             <a
                                                 href={edge.node.projectUrl}
                                                 target='_blank'
-                                                rel='noopener noreferrer'
+                                                rel='noreferrer'
                                                 className={
                                                     portfolioStyle.btn_link
                                                 }>
@@ -135,7 +135,7 @@ const PortfolioPage = () => (
                                             <a
                                                 href={edge.node.githubUrl}
                                                 target='_blank'
-                                                rel='noopener noreferrer'
+                                                rel='noreferrer'
                                                 className={
                                                     portfolioStyle.btn_link
                                                 }>
