@@ -52,17 +52,17 @@ class ContactPage extends React.Component {
                                 Get in touch!
                             </h2>
                             <form
-                                method='post'
-                                data-netlify-honeypot='bot-field'
-                                data-netlify='true'
-                                name='contact'
+                                // method='post'
+                                // data-netlify-honeypot='bot-field'
+                                // data-netlify='true'
+                                // name='contact'
                                 onSubmit={this.handleSubmit}>
-                                <input type='hidden' name='bot-field' />
+                                {/* <input type='hidden' name='bot-field' />
                                 <input
                                     type='hidden'
                                     name='form-name'
                                     value='contact'
-                                />
+                                /> */}
                                 <input
                                     type='text'
                                     name='name'
@@ -99,7 +99,17 @@ class ContactPage extends React.Component {
                                     value={this.state.message}
                                     onChange={this.handleInputChange}
                                 />
-                                <div className={contactStyles.send_form}>
+                                <button
+                                    type='submit'
+                                    className={contactStyles.btn_send}
+                                    style={{
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                    }}>
+                                    <i class='ri-send-plane-fill'></i>
+                                    Send
+                                </button>
+                                {/* <div className={contactStyles.send_form}>
                                     <button
                                         type='submit'
                                         className={contactStyles.btn_send}
@@ -119,7 +129,7 @@ class ContactPage extends React.Component {
                                         <i class='ri-check-line'></i>
                                         <p>Message sent!</p>
                                     </div>
-                                </div>
+                                </div> */}
                             </form>
                         </div>
                         <div className={contactStyles.social_contacts}>
