@@ -32,7 +32,7 @@ class ContactPage extends React.Component {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'contact', ...this.state }),
         })
-            .then(() => alert('Success!'))
+            .then(() => this.setState({ messageSent: true }))
             .catch((error) => alert(error));
 
         this.setState({
@@ -109,6 +109,15 @@ class ContactPage extends React.Component {
                                     <i class='ri-send-plane-fill'></i>
                                     Send
                                 </button>
+                                <span
+                                    className={
+                                        this.state.messageSent
+                                            ? contactStyles.send_form_messageSent
+                                            : contactStyles.send_form_messageNotSent
+                                    }>
+                                    <i class='ri-check-line'></i>
+                                    <p>Message sent!</p>
+                                </span>
                                 {/* <div className={contactStyles.send_form}>
                                     <button
                                         type='submit'
