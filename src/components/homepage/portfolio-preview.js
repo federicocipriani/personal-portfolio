@@ -23,8 +23,8 @@ const PortfolioPreview = () => (
                                 }
                             }
                             shortDescription
-                            languages {
-                                language
+                            tags {
+                                tag
                             }
                         }
                     }
@@ -96,12 +96,12 @@ const PortfolioPreview = () => (
                                     className={
                                         portfolioPreviewStyles.section__content__showcase__card_details_labels
                                     }>
-                                    {edge.node.languages.map((language) => (
+                                    {edge.node.tags.map((tag) => (
                                         <p
                                             className={
-                                                portfolioPreviewStyles.section__content__showcase__card_details_labels_language
+                                                portfolioPreviewStyles.section__content__showcase__card_details_labels_tag
                                             }>
-                                            {language.language}
+                                            {tag.tag}
                                         </p>
                                     ))}
                                 </div>

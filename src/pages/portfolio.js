@@ -30,8 +30,8 @@ const PortfolioPage = () => (
                             }
                             projectUrl
                             githubUrl
-                            languages {
-                                language
+                            tags {
+                                tag
                             }
                         }
                     }
@@ -95,18 +95,16 @@ const PortfolioPage = () => (
                                         </p>
                                         <div
                                             className={
-                                                portfolioStyle.page__content__card_content_languages
+                                                portfolioStyle.page__content__card_content_tags
                                             }>
-                                            {edge.node.languages.map(
-                                                (language) => (
-                                                    <p
-                                                        className={
-                                                            portfolioStyle.page__content__card_content_languages_label
-                                                        }>
-                                                        {language.language}
-                                                    </p>
-                                                )
-                                            )}
+                                            {edge.node.tags.map((tag) => (
+                                                <p
+                                                    className={
+                                                        portfolioStyle.page__content__card_content_tags_label
+                                                    }>
+                                                    {tag.tag}
+                                                </p>
+                                            ))}
                                         </div>
                                         <p
                                             className={
