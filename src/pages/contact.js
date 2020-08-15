@@ -5,19 +5,16 @@ import Head from '../components/head';
 import { useState } from 'react';
 
 class ContactPage extends React.Component {
-    // const [messageSent, setMessageSent] = useState(false);
-
-    // const sentMessage = () => {
-    //     setMessageSent(!messageSent);
-    // };
-
-    state = {
-        name: '',
-        email: '',
-        subject: '',
-        message: '',
-        messageSent: false,
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            subject: '',
+            message: '',
+            messageSent: false,
+        };
+    }
 
     handleInputChange = (event) => {
         const target = event.target;
@@ -27,8 +24,17 @@ class ContactPage extends React.Component {
             [name]: value,
         });
     };
+
     handleSubmit = (event) => {
         event.preventDefault();
+        fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode({ 'form-name': 'contact', ...this.state }),
+        })
+            .then(() => alert('Success!'))
+            .catch((error) => alert(error));
+
         this.setState({
             messageSent: true,
         });
@@ -47,7 +53,7 @@ class ContactPage extends React.Component {
                             </h2>
                             <form
                                 method='post'
-                                netlify-honeypot='bot-field'
+                                data-netlify-honeypot='bot-field'
                                 data-netlify='true'
                                 name='contact'
                                 onSubmit={this.handleSubmit}>
@@ -170,72 +176,11 @@ class ContactPage extends React.Component {
 
 export default ContactPage;
 
-{
-    /* <form
-                            method='post'
-                            action='/contact'
-                            netlify-honeypot='bot-field'
-                            data-netlify='true'
-                            name='contact'>
-                            <input type='hidden' name='bot-field' />
-                            <input
-                                type='hidden'
-                                name='form-name'
-                                value='contact'
-                            />
-
-                            <input
-                                type='text'
-                                name='name'
-                                id='name'
-                                placeholder='Your name'
-                                className={contactStyles.inputField}
-                            />
-
-                            <input
-                                type='email'
-                                name='email'
-                                id='email'
-                                placeholder='Your e-mail'
-                                className={contactStyles.inputField}
-                            />
-
-                            <input
-                                type='text'
-                                name='subject'
-                                id='subject'
-                                placeholder='A title'
-                                className={contactStyles.inputField}
-                            />
-
-                            <textarea
-                                name='message'
-                                id='message'
-                                rows='5'
-                                placeholder='Message in here!'
-                                className={contactStyles.textArea}
-                            />
-                            <div className={contactStyles.send_form}>
-                                <button
-                                    type='submit'
-                                    onClick={sentMessage}
-                                    className={contactStyles.btn_send}
-                                    style={{
-                                        display: 'flex',
-                                        alignItems: 'center',
-                                    }}>
-                                    <i class='ri-send-plane-fill'></i>
-                                    Send
-                                </button>
-                                <div
-                                    className={
-                                        messageSent
-                                            ? contactStyles.send_form_messageSent
-                                            : contactStyles.send_form_messageNotSent
-                                    }>
-                                    <i class='ri-check-line'></i>
-                                    <p>Message sent!</p>
-                                </div>
-                            </div>
-                        </form> */
-}
+const encode = (data) => {
+    return Object.keys(data)
+        .map(
+            (key) =>
+                encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+        )
+        .join('&');
+};
