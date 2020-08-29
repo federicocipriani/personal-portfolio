@@ -85,7 +85,7 @@ class ContactPage extends React.Component {
                                     type='text'
                                     name='subject'
                                     id='subject'
-                                    placeholder='A title'
+                                    placeholder='A title for your message'
                                     className={contactStyles.inputField}
                                     value={this.state.subject}
                                     onChange={this.handleInputChange}
@@ -118,27 +118,6 @@ class ContactPage extends React.Component {
                                     <i class='ri-check-line'></i>
                                     <p>Message sent!</p>
                                 </span>
-                                {/* <div className={contactStyles.send_form}>
-                                    <button
-                                        type='submit'
-                                        className={contactStyles.btn_send}
-                                        style={{
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                        }}>
-                                        <i class='ri-send-plane-fill'></i>
-                                        Send
-                                    </button>
-                                    <div
-                                        className={
-                                            this.state.messageSent
-                                                ? contactStyles.send_form_messageSent
-                                                : contactStyles.send_form_messageNotSent
-                                        }>
-                                        <i class='ri-check-line'></i>
-                                        <p>Message sent!</p>
-                                    </div>
-                                </div> */}
                             </form>
                         </div>
                         <div className={contactStyles.social_contacts}>
