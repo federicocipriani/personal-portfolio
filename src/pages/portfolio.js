@@ -37,7 +37,10 @@ const PortfolioPage = () => {
         }
     `);
 
+    // Extract projects from result of the query
     const projects = data.allContentfulProject.edges.map((edge) => edge.node);
+
+    // Extract tags for each project
     var tags = [];
     projects.map((project) => {
         tags.push(
@@ -47,9 +50,11 @@ const PortfolioPage = () => {
         );
     });
 
+    // Initialise hooks for state management
     const [projects_filter, setProjectFiltered] = useState([...projects]);
     const [activeFilters, setActiveFilters] = useState([]);
 
+    // Extract unique set of tags from available projects
     let filter = [];
     data.allContentfulProject.edges.map((project) =>
         project.node.tags.map((tag) => {
@@ -57,6 +62,7 @@ const PortfolioPage = () => {
         })
     );
 
+    // Handle filtering once a tag is clicked in the browser
     const handleFiltering = (tag) => {
         let temp = [...activeFilters];
 
